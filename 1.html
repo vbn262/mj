@@ -13,10 +13,13 @@
       --secondary-text-color: #666;
       --border-color: #e0e0e0;
     }
+    *{
+      margin: 0;
+      padding: 0;
+    }
     body {
       text-align: center;
-      margin: 0;
-      justify-content: space-between;
+      margin-top: 99px;
     }
     .header {
       position: fixed;
@@ -34,20 +37,19 @@
       text-decoration: none;
       color: var(--text-color);
       position: relative;
-      padding: 0;
       cursor: pointer;
     }
     .nav-item i {
-      font-size: 1.2rem;
+      font-size: 2rem;
       margin-right: 6px;
     }
     .mobile-nav {
       display: none;
       position: absolute;
-      top: 20px;
+      top: 40px;
       background: #fff;
       border: 1px solid black;
-      height: 20vh;
+      height: 10vh;
       overflow-y: auto;
     }
     .mobile-nav .nav-item {
@@ -63,7 +65,7 @@
     </style>
   </head>
   <body>
-    <header class="header"><div class="nav-item" id="menu-toggle"><i class="fas fa-bars"></i></div><div class="fas">vbn262.com | 冖井</div><div class="mobile-nav" id="mobile-nav" style="text-align: center;"><h3><a href="https://vbn262.github.io/zb/1.html" class="fas" style="color: var(--text-color);">zb.vbn262.com</a></h3><h3><a href="https://space.bilibili.com/1414517639" target="_blank" class="fas">联系</a></h3></div></header>
+    <header class="header"><div class="nav-item" id="menu-toggle"><i class="fas fa-bars"></i></div><div class="fas" style="font-size: 2rem;">vbn262.com | 冖井</div><div class="mobile-nav" id="mobile-nav" style="text-align: center;"><h3><a href="https://vbn262.github.io/zb/1.html" class="fas" style="color: var(--text-color);">zb.vbn262.com</a></h3><h3><a href="https://space.bilibili.com/1414517639" target="_blank" class="fas">联系</a></h3></div></header>
     <h1>网站名字: 冖井</h1><h1>本网站由我自己独立完成</h1><h1 onclick="dapp()"><i class="fas">DOWNLOAD APP</i></h1><h1 onclick="stame()"><i class="fas">PC官网: stame</i></h1><h1 onclick="s()"><i class="fas">页游官网: 4399小游戏</i></h1><h1><i class="far fa-calendar-check">2024/9开始做网页</i></h1>
     <footer style="margin: 0 auto;max-width: 999px;border: 1px solid pink;">
       <a href="https://space.bilibili.com/1414517639" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #333;font-size: 2rem;"></i></a>
