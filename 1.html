@@ -16,6 +16,7 @@
     body {
       text-align: center;
       margin: 0;
+      justify-content: space-between;
     }
     .header {
       position: fixed;
@@ -23,7 +24,6 @@
       left: 0;
       right: 0;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       background: linear-gradient(135deg, #fef 9%, pink 100%);
     }
@@ -34,7 +34,7 @@
       text-decoration: none;
       color: var(--text-color);
       position: relative;
-      padding: 0 20px;
+      padding: 0px 2px 0 20px;
       cursor: pointer;
     }
     .nav-item i {
@@ -44,11 +44,10 @@
     .mobile-nav {
       display: none;
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 20px;
       background: #fff;
-      height: 50vh;
+      border: 1px solid black;
+      height: 20vh;
       overflow-y: auto;
     }
     .mobile-nav .nav-item {
@@ -64,8 +63,8 @@
     </style>
   </head>
   <body>
-    <header class="header"><a href="" class="fas nav-item" style="font-weight: bold;">mj.vbn262.com</a><div class="nav-item" id="menu-toggle"><i class="fas fa-bars"></i></div><div class="mobile-nav" id="mobile-nav" style="text-align: center;"><h3><a href="https://vbn262.github.io/zb/1.html" class="fas" style="color: var(--text-color);">zb.vbn262.com</a></h3><h3><a href="https://space.bilibili.com/1414517639" target="_blank" class="fas">联系</a></h3></div></header>
-    <h1>本网站由我自己独立完成</h1><h1 onclick="dapp()"><i class="fas">DOWNLOAD APP</i></h1><h1 onclick="stame()"><i class="fas">PC官网: stame</i></h1><h1 onclick="s()"><i class="fas">页游官网: 4399小游戏</i></h1><h1><i class="far fa-calendar-check">2024/9开始做网页</i></h1>
+    <header class="header"><div class="nav-item" id="menu-toggle"><i class="fas fa-bars"></i></div><div class="fas">vbn262.com | 冖井</div><div class="mobile-nav" id="mobile-nav" style="text-align: center;"><h3><a href="https://vbn262.github.io/zb/1.html" class="fas" style="color: var(--text-color);">zb.vbn262.com</a></h3><h3><a href="https://space.bilibili.com/1414517639" target="_blank" class="fas">联系</a></h3></div></header>
+    <h1>网站名字: 冖井</h1><h1>本网站由我自己独立完成</h1><h1 onclick="dapp()"><i class="fas">DOWNLOAD APP</i></h1><h1 onclick="stame()"><i class="fas">PC官网: stame</i></h1><h1 onclick="s()"><i class="fas">页游官网: 4399小游戏</i></h1><h1><i class="far fa-calendar-check">2024/9开始做网页</i></h1>
     <footer style="margin: 0 auto;max-width: 999px;border: 1px solid pink;">
       <a href="https://space.bilibili.com/1414517639" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #333;font-size: 2rem;"></i></a>
       <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" title="抖音"><i class="fab fa-tiktok" style="color: #333;font-size: 2rem;"></i></a>
