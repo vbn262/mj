@@ -54,10 +54,12 @@
     </style>
   </head>
   <body>
-    <header class="header"><div class="fas" style="color: pink;z-index: 1;padding: 9px;">vbn262.com 冖井</div><div class="nav-item" id="menu-toggle"><i class="fas fa-bars"></i></div><div class="mobile-nav" id="mobile-nav" style="text-align: center;"><h3><a href="https://vbn262.github.io/zb/1.html" class="fas" style="color: var(--text-color);margin-top: 60px;">zb.vbn262.com</a></h3><h3><a href="https://space.bilibili.com/1414517639" target="_blank" class="fas">联系</a></h3></div></header>
+    <header class="header"><div class="fas" style="color: pink;z-index: 1;padding: 9px;">vbn262冖井</div><div class="nav-item" id="menu-toggle"><i class="fas fa-bars"></i></div><div class="mobile-nav" id="mobile-nav" style="text-align: center;"><h3><a href="https://vbn262.github.io/zb/1.html" class="fas" style="color: var(--text-color);margin-top: 60px;">zb.vbn262.com</a></h3><h3><a href="https://space.bilibili.com/1414517639" target="_blank" class="fas">联系</a></h3></div></header>
     <h1>网站名字: 冖井</h1><h1>本网站由我自己独立完成</h1>
-    <div onclick="dapp()" style="margin: 0 auto;max-width: 999px;border: 1px solid #333;">
+    <div onclick="app()" style="margin: 0 auto;max-width: 999px;border: 1px solid #333;">
       <h1><i class="fas">DOWNLOAD APP</i></h1>
+      <h1><i class="fas">android</i></h1>
+      <h1><i class="fas">ios</i></h1>
     </div>
     <div onclick="pc()" style="margin: 0 auto;max-width: 999px;border: 1px solid #333;margin-top: 9px;">
       <h1><i class="fas">PC官网</i></h1>
@@ -79,7 +81,7 @@
       </h5>
     </footer>
     <script>
-    const dapp=()=>alert('APP下载功能即将开放，敬请期待！');const pc=()=>alert('功能即将开放');const mT=document.getElementById('menu-toggle'),mN=document.getElementById('mobile-nav');
+    const app=()=>alert('APP下载功能即将开放，敬请期待！');const pc=()=>alert('功能即将开放');const mT=document.getElementById('menu-toggle'),mN=document.getElementById('mobile-nav');
     mT.onclick=()=>{mN.style.display=mN.style.display==='block'?'none':'block';mT.firstElementChild.className=`fas fa-${mN.style.display==='block'?'times':'bars'}`;};
     </script>
   </body>
