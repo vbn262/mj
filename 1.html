@@ -19,7 +19,7 @@
     }
     .nav-item i {font-size: 1rem;margin-right: 6px;
     }
-    .mobile-nav {display: none;position: absolute;top: -100px;left: 0;right: 0;background: #fff;
+    .mobile-nav {display: none;position: absolute;top: -120px;left: 0;right: 0;background: #fff;
       border-bottom: 1px solid black;height: 20vh;overflow-y: auto;
     }
     </style>
@@ -42,8 +42,8 @@
       <h3>暂无游戏</h3>
     </div>
     <div style="margin: 0 auto;max-width: 999px;border: 1px solid #333;margin-top: 9px;">
-      <h1 onclick="pc()">掌机</h1>
-      <h1 onclick="pc()">游戏主机</h1>
+      <h1 onclick="app()">掌机</h1>
+      <h1 onclick="app()">游戏主机</h1>
     </div>
     <footer style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 9px;margin-bottom: 9px;">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@
       <h5>Copyright © 2025 vbn262.com All Rights Reserved</h5><h5>VBN262工作室群 版权所有<a href="https://beian.miit.gov.cn" target="_blank"> 鲁ICP备2025163733号-1</a></h5>
     </footer>
     <script>
-    const app=()=>alert('APP下载功能即将开放，敬请期待!');const pc=()=>alert('功能即将开放');const mT=document.getElementById('menu-toggle'),mN=document.getElementById('mobile-nav');
+    const app=()=>alert('暂无');const mT=document.getElementById('menu-toggle'),mN=document.getElementById('mobile-nav');
     mT.onclick=()=>{mN.style.display=mN.style.display==='block'?'none':'block';mT.firstElementChild.className=`fas fa-${mN.style.display==='block'?'times':'bars'}`;};
     </script>
   </body>
