@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>mj-冖井之旅-风鸣玄太官网</title>
+<script src="https://cdn.tailwindcss.com"></script>
     <style>
     :root {--bg-color: #fefefe;--text-color: #333;--secondary-text-color: #666;--border-color: #e0e0e0;
     }
@@ -26,21 +27,146 @@
   </head>
   <body>
     <header class="header"><div class="fas" style="color: pink;z-index: 1;padding: 9px;">MJ</div><div class="nav-item" id="menu-toggle"><i class="fas fa-bars"></i></div><div class="mobile-nav" id="mobile-nav" style="text-align: center;"><h3 style="color: var(--text-color);">网站名字: 冖井之旅</h3><h3><a href="" class="fas" style="color: var(--text-color);">mj.vbn262.com</a></h3></div></header>
-    <div style="margin: 0 auto;max-width: 999px;border: 1px solid #333;">
-      <h1 class="fas">DOWNLOAD APP</h1>
-      <h2 onclick="app()">Android</h2>
-      <h2 onclick="app()">iOS</h2>
-    </div>
-    <div style="margin: 0 auto;max-width: 999px;border: 1px solid #333;margin-top: 9px;">
-      <h1 class="fas">PC官网</h1>
-      <h2><a href="https://store.steampowered.com/" target="_blank">STEAM</a></h2>
-      <h2><a href="https://store.epicgames.com/zh-CN/" target="_blank">EPIC</a></h2>
-      <h3>暂无游戏</h3>
-    </div>
-    <div style="margin: 0 auto;max-width: 999px;border: 1px solid #333;margin-top: 9px;">
-      <h1><a href="https://www.4399.com/" target="_blank" class="fas">页游官网: 4399小游戏</a></h1><h3>暂无游戏</h3>
-    </div>
+    <section class="relative py-24 md:py-32 bg-gradient-soft">
+      <div class="container mx-auto px-4">
+        
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-display font-bold text-gray-900 mb-6 leading-tight text-shadow animate-fade-in">冖井之旅</h1>
+          <p class="text-gray-600 text-lg md:text-xl mb-8 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.1s;">探索简约美学与游戏乐趣的完美融合</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style="animation-delay: 0.2s;">
+            <a href="#download"  class="px-8 py-4 bg-white hover:bg-gray-50 text-primary border border-primary rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">立即下载</a>
+            <a href="#trailer" class="px-8 py-4 bg-white hover:bg-gray-50 text-primary border border-primary rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">观看宣传片</a>
+          </div>
+          <div class="mt-16 relative animate-fade-in" style="animation-delay: 0.3s;">
+            <img src="https://picsum.photos/1200/675?random=8" alt="冖井之旅游戏截图" class="w-full h-auto rounded-2xl shadow-lg">
+            <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-md card-hover">
+              <div class="flex items-center space-x-2">
+                <i class="fa fa-star text-yellow-400"></i><i class="fa fa-star text-yellow-400"></i><i class="fa fa-star text-yellow-400"></i><i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star-half-o text-yellow-400"></i><span class="text-sm text-gray-600">4.5/5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- 游戏特点 -->
+    <section style="margin: 0 auto;max-width: 999px;border: 1px solid #333;margin-top: 9px;">
+      <div class="container mx-auto px-4">
+        
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-center mb-16 text-gray-900">游戏特色</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- 特色1 -->
+          <div class="bg-white rounded-2xl p-8 shadow-md border-soft card-hover">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fa fa-paint-brush text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-4 text-gray-800">修仙</h3>
+            <p class="text-gray-600 text-center">简约而不简单的视觉设计，营造沉浸式修仙游戏体验</p>
+          </div>
+          
+          <!-- 特色2 -->
+          <div class="bg-white rounded-2xl p-8 shadow-md border-soft card-hover">
+            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fa fa-gamepad text-secondary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-4 text-gray-800">创新玩法</h3>
+            <p class="text-gray-600 text-center">融合经典与现代的游戏机制，带来全新体验</p>
+          </div>
+          
+          <!-- 特色3 -->
+          <div class="bg-white rounded-2xl p-8 shadow-md border-soft card-hover">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fa fa-users text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-4 text-gray-800">社交互动</h3>
+            <p class="text-gray-600 text-center">与好友一起探索，分享游戏中的精彩时刻</p>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+    <!-- 下载区域 -->
+    <section id="pc" style="margin: 0 auto;max-width: 999px;border: 1px solid #333;margin-top: 9px;">
+      <div class="container mx-auto px-4">
+        
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-center mb-12 text-gray-900">下载游戏</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="bg-white rounded-2xl shadow-md p-8 border-soft card-hover">
+            <div class="flex items-center mb-6">
+              <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+                <i class="fa fa-steam text-gray-700 text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">Android 版本</h3>
+            </div>
+            <p class="text-gray-600 mb-6">在您的 Android 设备上体验极简美学游戏</p>
+            <a href="" class="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg font-medium transition-all duration-300 flex items-center justify-center">
+              <i class="fa fa-external-link mr-2"></i> 下载 APK</a>
+          </div>
+          
+          <div class="bg-white rounded-2xl shadow-md p-8 border-soft card-hover">
+            <div class="flex items-center mb-6"><div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+              <i class="fa fa-steam text-gray-700 text-2xl"></i></div><h3 class="text-xl font-semibold text-gray-800">iOS 版本</h3>
+            </div>
+            <p class="text-gray-600 mb-6">在您的 iPhone 或 iPad 上享受简约游戏乐趣</p>
+            <a href="" class="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg font-medium transition-all duration-300 flex items-center justify-center"><i class="fa fa-external-link mr-2"></i> App Store 下载</a>
+          </div>
+          <div class="text-center mt-10 text-gray-600"><p>手机版本开发中，敬请期待</p></div>
+        </div>
+      </div>
+    </section>
+    <!-- PC官网区域 -->
+    <section id="pc" style="margin: 0 auto;max-width: 999px;border: 1px solid #333;margin-top: 9px;">
+      <div class="container mx-auto px-4">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-center mb-12 text-gray-900">PC 平台</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- Steam卡片 -->
+           <div class="bg-white rounded-2xl shadow-md p-8 border-soft card-hover">
+             <div class="flex items-center mb-6">
+               <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mr-4"><i class="fa fa-steam text-gray-700 text-2xl"></i></div>
+               <h3 class="text-xl font-semibold text-gray-800">Steam 平台</h3>
+             </div>
+             <p class="text-gray-600 mb-6">在 Steam 平台上体验更高分辨率的游戏画面</p>
+             <a href="https://store.steampowered.com/" target="_blank" class="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg font-medium 
+               transition-all duration-300 flex items-center justify-center"><i class="fa fa-external-link mr-2"></i> 访问 Steam 商店</a>
+           </div>
+          <!-- Epic卡片 -->
+          <div class="bg-white rounded-2xl shadow-md p-8 border-soft card-hover">
+            <div class="flex items-center mb-6">
+              <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mr-4"><i class="fa fa-gamepad text-gray-700 text-2xl"></i></div>
+              <h3 class="text-xl font-semibold text-gray-800">Epic Games</h3>
+            </div>
+            <p class="text-gray-600 mb-6">在 Epic Games 平台获取独家游戏内容</p>
+            <a href="https://store.epicgames.com/zh-CN/" target="_blank" class="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg font-medium transition-all 
+              duration-300 flex items-center justify-center"><i class="fa fa-external-link mr-2"></i> 访问 Epic 商店</a>
+          </div>
+        </div>
+        <div class="text-center mt-10 text-gray-600"><p>PC版本开发中，敬请期待</p></div>
+      </div>
+    </section>
+    <!-- 页游官网区域 -->
+    <section id="web" style="margin: 0 auto;max-width: 999px;border: 1px solid #333;margin-top: 9px;">
+      <div class="container mx-auto px-4">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-center mb-12 text-gray-900">网页版游戏</h2>
+        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-md p-8 border-soft card-hover">
+          <div class="flex items-center mb-6"><div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mr-4"><i class="fa fa-globe text-primary text-2xl"></i></div><h3 class="text-xl font-semibold text-dark">4399 小游戏平台</h3></div>
+          <p class="text-gray-600 mb-6">在网页浏览器中体验轻量级游戏乐趣</p><a href="https://www.4399.com/" target="_blank" style="margin: 0 auto;max-width: 999px;"><i class="fa fa-play mr-2"></i> 开始游戏</a>
+          <div class="text-center mt-8 text-gray-600"><p>网页版即将上线，敬请期待</p></div>
+        </div>
+      </div>
+    </section>
+    <!-- 关于我们区域 -->
     <footer style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 9px;margin-bottom: 50px;">
+      <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4"><h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-center mb-12 text-gray-900">关于我们</h2>
+          <div class="max-w-4xl mx-auto">
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 text-center">风鸣玄太工作室</h3><p class="text-gray-600 mb-6">风鸣玄太工作室成立于2025年，主业做网页，游戏，售卖游戏主机电脑手机等。</p>
+            <p class="text-gray-600">冖井之旅是我们的首款作品</p><p class="text-gray-600">融合了极简设计理念与创新游戏机制</p><p class="text-gray-600">希望为玩家带来与众不同的游戏体验</p>
+          </div>
+        </div>
+      </section>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
       <a href="https://space.bilibili.com/1414517639" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #333;font-size: 2rem;"></i></a>
       <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" title="抖音"><i class="fab fa-tiktok" style="color: #333;font-size: 2rem;"></i></a>
@@ -49,4 +175,4 @@
     </footer>
     <script>const mT=document.getElementById('menu-toggle'),mN=document.getElementById('mobile-nav');mT.onclick=()=>{mN.style.display=mN.style.display==='block'?'none':'block';mT.firstElementChild.className=`fas fa-${mN.style.display==='block'?'times':'bars'}`;};</script>
   </body>
-</html>
+</htm
