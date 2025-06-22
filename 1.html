@@ -4,11 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>mj - 冖井之旅 - 风鸣玄太官网</title>
-  <!-- 引入外部资源 -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  
-  <!-- Tailwind 配置 -->
   <script>
     tailwind.config = {
       theme: {
@@ -42,7 +39,6 @@
       }
     }
   </script>
-  <!-- 自定义工具类 -->
   <style type="text/tailwindcss">
     @layer utilities {
       .content-auto {
@@ -72,7 +68,7 @@
     </div>
 
     <!-- 顶部导航栏 -->
-    <header class="fixed top-0 left-0 right-0 bg-pink/50 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
+    <header class="fixed top-0 left-0 right-0 bg-pink/19 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="" class="flex items-center space-x-2">
                 <span class="text-primary text-2xl font-display font-bold">MJ</span>
@@ -86,13 +82,11 @@
                 <a href="#web" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">页游官网</a>
                 <a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">关于我们</a>
             </nav>
-            
             <!-- 移动端菜单按钮 -->
             <button id="menu-toggle" class="md:hidden text-gray-700 hover:text-primary focus:outline-none">
                 <i class="fa fa-bars text-xl"></i>
             </button>
         </div>
-        
         <!-- 移动端导航菜单 -->
         <div id="mobile-nav" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none">
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
