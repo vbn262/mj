@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>mj - 冖井之旅 - 风鸣玄太官网</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -57,46 +55,54 @@
       .bg-gradient-soft {
         background: linear-gradient(135deg, #ffffff 0%, #fff5f8 100%);
       }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+      }
     }
   </style>
 </head>
 <body class="bg-light text-dark font-display antialiased">
   <!-- 装饰性元素 -->
-    <div class="fixed inset-0 z-0 pointer-events-none">
-        <div class="absolute top-20 right-10 w-40 h-40 rounded-full bg-primary/10 filter blur-3xl animate-float" style="animation-delay: 0s;"></div>
-        <div class="absolute bottom-30 left-20 w-60 h-60 rounded-full bg-secondary/10 filter blur-3xl animate-float" style="animation-delay: 1.5s;"></div>
-    </div>
+  <div class="fixed inset-0 z-0 pointer-events-none">
+    <div class="absolute top-20 right-10 w-40 h-40 rounded-full bg-primary/10 filter blur-3xl animate-float" style="animation-delay: 0s;"></div>
+    <div class="absolute bottom-30 left-20 w-60 h-60 rounded-full bg-secondary/10 filter blur-3xl animate-float" style="animation-delay: 1.5s;"></div>
+  </div>
 
-    <!-- 顶部导航栏 -->
-    <header class="fixed top-0 left-0 right-0 bg-pink/19 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="" class="flex items-center space-x-2">
-                <span class="text-primary text-2xl font-display font-bold">MJ</span>
-                <span class="hidden sm:inline text-gray-800 font-display font-semibold">冖井之旅</span>
-            </a>
-            
-            <!-- 桌面导航 -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#download" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">下载</a>
-                <a href="#pc" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">PC官网</a>
-                <a href="#web" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">页游官网</a>
-                <a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">关于我们</a>
-            </nav>
-            <!-- 移动端菜单按钮 -->
-            <button id="menu-toggle" class="md:hidden text-gray-700 hover:text-primary focus:outline-none">
-                <i class="fa fa-bars text-xl"></i>
-            </button>
-        </div>
-        <!-- 移动端导航菜单 -->
-        <div id="mobile-nav" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none">
-            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-                <a href="#download" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">下载</a>
-                <a href="#pc" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">PC官网</a>
-                <a href="#web" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">页游官网</a>
-                <a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2">关于我们</a>
-            </div>
-        </div>
-    </header>
+  <!-- 顶部导航栏 -->
+  <header class="fixed top-0 left-0 right-0 bg-pink/9 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="" class="flex items-center space-x-2">
+        <span class="text-primary text-2xl font-display font-bold">MJ</span>
+        <span class="hidden sm:inline text-gray-800 font-display font-semibold">冖井之旅</span>
+      </a>
+      
+      <!-- 桌面导航 -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#download" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">下载</a>
+        <a href="#pc" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">PC官网</a>
+        <a href="#web" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">页游官网</a>
+        <a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">关于我们</a>
+      </nav>
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-gray-700 hover:text-primary focus:outline-none">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-nav" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+        <a href="#download" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">下载</a>
+        <a href="#pc" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">PC官网</a>
+        <a href="#web" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">页游官网</a>
+        <a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2">关于我们</a>
+      </div>
+    </div>
+  </header>
   
   <!-- 英雄区域 -->
   <section class="relative pt-20 pb-32 md:pt-32 md:pb-40 bg-gradient-soft">
