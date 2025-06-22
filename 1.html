@@ -85,40 +85,34 @@
   <main class="pt-20 relative z-10">
     <!-- 英雄区 -->
     <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-[#fff5f8] relative overflow-hidden">
-      <div class="container mx-auto px-4 py-16 md:py-24">
+      <!-- 背景装饰元素 -->
+      <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" style="animation-delay: 0s"></div>
+      <div class="absolute -bottom-32 -left-16 w-80 h-80 bg-secondary/5 rounded-full blur-3xl animate-float" style="animation-delay: 2s"></div>
+      
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div class="order-2 md:order-1 animate-slide-up">
-            <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight mb-6">
+          <div class="animate-slide-up">
+            <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight mb-6 text-shadow-lg">
               冖井之旅<br>
               <span class="text-primary">探索神秘世界</span>
             </h1>
             <p class="text-neutral text-lg md:text-xl mb-8 max-w-lg">
-              踏上一段充满奇幻与冒险的旅程，在冖井世界中探索未知的领域，挑战强大的敌人，解开古老的谜团。
+              踏上充满奇幻与冒险的旅程，探索未知领域，挑战强大敌人，解开古老谜团，在修仙世界中成就不朽传奇。
             </p>
             <div class="flex flex-wrap gap-4">
-              <a href="#download" class="px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-full font-medium transition-all duration-300 shadow-lg flex items-center gap-2">
+              <a href="#download" class="btn-primary flex items-center gap-2">
                 <i class="fa fa-download"></i> 立即下载
               </a>
-              <a href="#trailer" class="px-8 py-3 bg-white hover:bg-gray-50 text-primary border border-primary rounded-full font-medium transition-all duration-300 flex items-center gap-2">
+              <a href="#trailer" class="btn-secondary flex items-center gap-2">
                 <i class="fa fa-play-circle"></i> 观看宣传片
               </a>
             </div>
           </div>
-          <div class="order-1 md:order-2 relative animate-fade-in">
-            <div class="relative">
-              <img src="https://picsum.photos/id/237/800/600" alt="冖井之旅游戏截图" class="rounded-2xl shadow-2xl w-full max-w-lg mx-auto">
-              <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg card-hover">
-                <div class="flex items-center gap-3">
-                  <div class="bg-primary/10 p-3 rounded-full">
-                    <i class="fa fa-star text-primary text-xl"></i>
-                  </div>
-                  <div>
-                    <div class="text-dark font-bold">4.9/5</div>
-                    <div class="text-neutral text-sm">来自100万+玩家的评价</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="animate-fade-in relative">
+            <img src="https://picsum.photos/id/237/800/600" alt="冖井之旅游戏截图" class="rounded-2xl shadow-2xl w-full max-w-lg mx-auto border-4 border-white shadow-xl">
+            <!-- 装饰元素 -->
+            <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-primary/20 rounded-lg -z-10"></div>
+            <div class="absolute -top-4 -left-4 w-16 h-16 bg-secondary/20 rounded-lg -z-10"></div>
           </div>
         </div>
       </div>
@@ -363,9 +357,9 @@
           <div class="bg-white p-6 rounded-xl shadow-md">
             <h3 class="text-xl font-semibold mb-3 text-primary">联系我们</h3>
             <p class="text-neutral">
-              <i class="fa fa-envelope mr-2"></i> contact@fengming.com<br>
-              <i class="fa fa-phone mr-2"></i> 400-123-4567<br>
-              <i class="fa fa-map-marker mr-2"></i> 山东省青岛市
+              <i class="fa fa-envelope mr-2"></i><a href="https://space.bilibili.com/1414517639" target="_blank" title="Bilibili"><i class="fab" style="color: #333;font-size: 2rem;">哔哩哔哩</i></a><br>
+              <i class="fa fa-phone mr-2"></i><br>
+              <i class="fa fa-map-marker mr-2"></i>
             </p>
           </div>
           
@@ -373,7 +367,7 @@
             <h3 class="text-xl font-semibold mb-3 text-primary">加入我们</h3>
             <p class="text-neutral">
               风鸣玄太工作室长期招聘游戏开发者、美术设计师、策划等职位，
-              <a href="#" class="text-primary hover:underline">查看招聘详情</a>
+              <a href="https://space.bilibili.com/1414517639" target="_blank" title="Bilibili" class="text-primary hover:underline">查看招聘详情</a>
             </p>
           </div>
           
@@ -381,7 +375,7 @@
             <h3 class="text-xl font-semibold mb-3 text-primary">用户反馈</h3>
             <p class="text-neutral">
               如有任何问题或建议，欢迎通过官方渠道反馈，
-              我们将认真对待每一条用户反馈。
+              我们将认真对待每一条用户反馈
             </p>
           </div>
         </div>
