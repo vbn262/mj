@@ -51,9 +51,9 @@
       <a href="" class="flex items-center space-x-2"><span class="text-primary text-2xl font-bold">MJ</span><span class="hidden sm:inline text-gray-800 font-semibold">冖井之旅</span></a>
       <!-- 桌面导航 -->
       <nav class="hidden md:flex items-center space-x-8">
-        <a href="#download" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">下载</a>
-        <a href="#pc" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">PC官网</a>
-        <a href="#web" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">页游官网</a>
+        <a href="#homepage" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">首页</a>
+        <a href="#web" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">暂无宣传片</a>
+        <a href="#dpw" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">下载\PC\页游官网</a>
         <a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">关于我们</a>
       </nav>
       <!-- 移动端菜单按钮 -->
@@ -62,16 +62,16 @@
     <!-- 移动端导航菜单 -->
     <div id="mobile-nav" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none">
       <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-        <a href="#download" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">下载</a>
-        <a href="#pc" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">PC官网</a>
-        <a href="#web" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">页游官网</a>
+        <a href="#homepage" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">首页</a>
+        <a href="#web" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">暂无宣传片</a>
+        <a href="#dpw" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">下载\PC\页游官网</a>
         <a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2">关于我们</a>
       </div>
     </div>
   </header>
   <!-- 主内容区 -->
   <main class="relative z-10">
-    <!-- 内容区 -->
+    <!-- 开头 -->
     <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-[#fff5f8] relative overflow-hidden">
       <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" style="animation-delay: 0s"></div>
       <div class="absolute -bottom-32 -left-16 w-80 h-80 bg-secondary/5 rounded-full blur-3xl animate-float" style="animation-delay: 2s"></div>
@@ -95,9 +95,9 @@
       </div>
     </section>
     <!-- 游戏特色 -->
-    <section id="download" style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 9px;margin-bottom: 99px;">
+    <section id="homepage" style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 9px;margin-bottom: 99px;">
       <div class="text-center mb-16 animate-fade-in">
-        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mt-12">立即下载 <span class="text-primary">冖井之旅</span></h2><h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center">游戏特色</h2><p class="text-neutral max-w-2xl mx-auto text-lg">选择适合您设备的版本，开始您的冒险之旅</p>
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mt-12"><span class="text-primary">冖井之旅</span>游戏特色</h2><p class="text-neutral max-w-2xl mx-auto text-lg">选择适合您设备的版本，开始您的冒险之旅</p>
       </div>
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
@@ -126,10 +126,15 @@
             <h3 class="text-xl font-semibold text-center mb-4">法术神通</h3><p class="text-neutral text-center">学习数百种法术神通，搭配不同灵根属性，打造属于自己的独特修仙道路</p>
           </div>
         </div>
-      
+        
     </div>
-    <!-- 下载区 -->
-      <div class="container mx-auto px-4 mt-9">
+    </section>
+
+    <!-- 下载\PC\页游官网区 -->
+    <section id="dpw" style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 9px;margin-bottom: 99px;">
+      <!-- 下载 -->
+      <div class="container mx-auto px-4 mt-12">
+        <h2 class="text-center animate-fade-in text-[clamp(1.8rem,4vw,3rem)] font-bold mt-9">立即下载 </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <!-- Android下载卡片 -->
           <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 card-hover">
@@ -154,9 +159,7 @@
         </div>
         <div class="text-center mt-8 text-neutral text-sm"><i class="fas fa-hourglass-half mr-1"></i> 手机版本开发中，敬请期待</div>
       </div>
-    </section>
-    <!-- PC官网区 -->
-    <section id="pc" style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 9px;margin-bottom: 99px;">
+      <!-- PC -->
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="order-2 lg:order-1">
@@ -188,10 +191,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- 页游官网区 -->
-    <section id="web" style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 9px;margin-bottom: 99px;">
-      <div class="container mx-auto px-4 relative z-10">
+      <!-- 页游 -->
+       <div class="container mx-auto px-4 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="animate-fade-in">
             <div class="relative">
