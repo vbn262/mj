@@ -17,7 +17,7 @@
         extend: {
           colors: {
             primary: '#FF6B9D',
-            secondary: '#4ECDC4',
+            secondary: '#FFCCD5',
             dark: '#333333',
             light: '#fefefe',
             neutral: '#666666',
@@ -48,7 +48,8 @@
     }
   </style>
 </head>
-<body class="bg-light text-dark font-display antialiased">
+<body>
+  <!-- 头部导航 -->
   <header class="fixed top-0 left-0 right-0 bg-pink/9 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
   <div class="container mx-auto px-4 py-3 flex justify-between items-center relative">
     <!-- 移动端菜单按钮（左侧） -->
@@ -72,15 +73,14 @@
   <!-- 移动端菜单（保持不变） -->
   <div id="mobile-nav" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none">
     <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-      <a href="" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">冖井之旅www.vbn262.com/mj</a>
+      <a href="" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100">www.vbn262.com</a>
       <a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-200 py-2">关于</a>
     </div>
   </div>
 </header>
-  <!-- 主内容区 -->
-  <main class="relative z-10">
-    <!-- 开头 -->
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-[#fff5f8] relative overflow-hidden">
+
+ <main>
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-[#fff5f8] relative overflow-hidden">
       <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" style="animation-delay: 0s"></div>
       <div class="absolute -bottom-32 -left-16 w-80 h-80 bg-secondary/5 rounded-full blur-3xl animate-float" style="animation-delay: 2s"></div>
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
@@ -102,8 +102,10 @@
         </div>
       </div>
     </section>
-    <!-- 页游宣传片 -->
-    <section id="web" style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 20px;margin-bottom: 99px;">
+
+<!-- 页游宣传片 -->
+    <section id="web" class="px-4 mb-44">
+<footer class="max-w-999px mx-auto border border-secondary text-center">
       <div class="text-center mb-16 animate-fade-in">
         <p class="text-[clamp(1.8rem,4vw,3rem)] font-bold mt-12"><span>暂无宣传片</span></p>
         <div class="container mx-auto px-4 relative z-10">
@@ -137,7 +139,8 @@
       </div>
     </section>
     <!-- 游戏特色 -->
-    <section id="pw" style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 9px;margin-bottom: 99px;">
+    <section id="pw" class="px-4 mb-44">
+<footer class="max-w-999px mx-auto border border-secondary text-center">
       <div class="text-center mb-16 animate-fade-in">
         <p class="text-[clamp(1.8rem,4vw,3rem)] font-bold mt-12"><span class="text-primary">冖井之旅</span>游戏特色</p><p class="text-neutral max-w-2xl mx-auto text-lg">选择适合您设备的版本，开始您的冒险之旅</p>
       </div>
@@ -197,9 +200,11 @@
           </div>
         </div>
       </div>
+</footer>
     </section>
     <!-- 下载区 -->
-    <section id="xz" style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 20px;margin-bottom: 99px;">
+    <section id="xz" class="px-4 mb-44">
+<footer class="max-w-999px mx-auto border border-secondary text-center">
       <div class="container mx-auto px-4 mt-12">
         <p class="text-center animate-fade-in text-[clamp(1.8rem,4vw,3rem)] font-bold mt-9">立即下载 </p>
         <div class="text-center mt-5 mb-8 text-neutral text-sm"><i class="fas fa-hourglass-half mr-1"></i> 所有版本暂无，敬请期待</div>
@@ -226,38 +231,24 @@
           </div>
         </div>
       </div>
+</footer>
     </section>
-    <!-- 关于我们区 -->
-    <section id="about" style="margin: 0 auto;max-width: 999px;border: 1px solid pink;margin-top: 9px;margin-bottom: 99px;">
-      <div class="text-center mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mt-12 mb-6"><span>关于我们</span></p>
-        <p class="mb-6 text-lg">风鸣玄太工作室成立于2025年，主业网页开发，游戏开发，动漫制作，干销售只要能销售不触犯法律的都卖</p>
-        <p class="text-neutral max-w-2xl mx-auto">冖井之旅是我们的首款作品，融合了道教文化与创新游戏机制，致力于为玩家带来与众不同的游戏体验</p>
-        <div class="flex flex-wrap justify-center gap-6">
-          <a href="https://space.bilibili.com/1414517639" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl shadow-md hover:bg-primary hover:text-white transition-all duration-300"><i class="fab fa-bilibili"></i></a>
-          <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl shadow-md hover:bg-primary hover:text-white transition-all duration-300"><i class="fab fa-tiktok"></i></a>
-          <a href="https://weibo.com/u/8007354845" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl shadow-md hover:bg-primary hover:text-white transition-all duration-300"><i class="fab fa-weibo"></i></a>
-          <a href="https://www.qq.com" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl shadow-md hover:bg-primary hover:text-white transition-all duration-300"><i class="fab fa-qq"></i></a>
-          <a href="https://www.zhihu.com" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl shadow-md hover:bg-primary hover:text-white transition-all duration-300"><i class="fa fa-commenting"></i></a>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-1 max-w-4xl mx-auto">
-          <div class="bg-white p-6 rounded-xl shadow-md">
-            <h3 class="text-xl font-semibold mb-3 text-primary">联系我们</h3>
-            <p class="text-neutral">如有任何问题或建议，欢迎通过官方渠道反馈，我们将认真对待每一条用户反馈，<a href="https://space.bilibili.com/1414517639" target="_blank" class="text-primary hover:underline">哔哩哔哩</a></p>
+
+<section id="about" class="px-4 mb-44">
+<footer class="max-w-999px mx-auto border border-secondary text-center">
+          <p class="text-4xl font-bold mb-6 mt-12">关于我们</p>
+<img src="4581.jpg" width="300" height="300" alt="宣传图" class="relative rounded-2xl shadow-xl mx-auto max-w-full h-auto animate-float" loading="lazy">
+          <div class="flex justify-center gap-6 mb-4">
+            <a href="https://space.bilibili.com/1414517639" target="_blank" rel="noopener noreferrer" title="Bilibili"><i class="fab fa-bilibili text-3xl"></i></a>
+            <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer" title="抖音"><i class="fab fa-tiktok text-3xl"></i></a>
+            <a href="https://weibo.com/u/8007354845" target="_blank" rel="noopener noreferrer" title="微博"><i class="fab fa-weibo text-3xl"></i></a>
           </div>
-          <div class="bg-white p-6 rounded-xl shadow-md">
-            <h3 class="text-xl font-semibold mb-3 text-primary">加入我们</h3>
-            <p class="text-neutral">风鸣玄太工作室长期招聘游戏开发者、美术设计师、策划等职位，<a href="https://space.bilibili.com/1414517639" target="_blank" title="Bilibili" class="text-primary hover:underline">查看招聘详情</a></p>
-          </div>
-        </div>
-        <a href="https://space.bilibili.com/1414517639" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #333;font-size: 2rem;"></i></a>
-        <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" title="抖音"><i class="fab fa-tiktok" style="color: #333;font-size: 2rem;"></i></a>
-        <a href="https://weibo.com/u/8007354845" target="_blank" title="微博"><i class="fab fa-weibo" style="color: #333;font-size: 2rem;"></i></a>
-        <p class="mb-2">Copyright © vbn262.com 2025</p><a href="https://beian.miit.gov.cn" target="_blank">风鸣玄太工作室 版权所有 鲁ICP备2025163733号-1</a>
-      </div>
-    </section>
-  </main>
-  <!-- 返回顶部按钮 -->
+          <p class="mb-2">Copyright © vbn262.com 2025</p><a href="https://beian.miit.gov.cn" target="_blank">风鸣玄太工作室 版权所有 鲁ICP备2025163733号-1</a>
+        </footer>
+</section>
+</main>
+
+<!-- 返回顶部按钮 -->
   <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-primary/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform scale-0 transition-all duration-300 z-50"><i class="fa fa-arrow-up"></i></button>
   <script>
     // 获取DOM元素
