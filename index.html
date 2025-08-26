@@ -3,219 +3,315 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="冖井之旅www.vbn262.com/mj风鸣玄太工作室成立于2025年，主业网页开发，游戏开发，动漫制作，干销售只要能销售不触犯法律的都卖">
+  <meta name="description" content="冖井之旅 - 探索神秘修仙世界，体验沉浸式修仙冒险，从炼气到飞升，成就不朽传奇">
+  <meta name="keywords" content="冖井之旅, 修仙游戏, 角色扮演, 仙侠, 游戏下载">
   <meta name="robots" content="index, follow"><title>冖井之旅www.vbn262.com/mj</title>
   <!-- 预加载关键资源 -->
   <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style">
-  <!-- CSS 资源 -->
+  <!-- 外部资源 -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-  <!-- Tailwind 配置简化 -->
+  <!-- Tailwind 配置 -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#FF6B9D',
-            secondary: '#FFCCD5',
-            dark: '#333333',
-            light: '#fefefe',
-            neutral: '#666666',
+            primary: '#2c3e50',
+            secondary: '#e9c46a',
+            accent: '#e76f51',
+            dark: '#1a1a2e',
+            light: '#f0ecd8',
+            'light-darker': '#d9d2b6',
+            ink: '#e6e1cf',
+            glow: 'rgba(233, 196, 106, 0.5)'
           },
           fontFamily: {
-            display: ['Inter', 'system-ui', 'sans-serif'],
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.8s ease-in-out',
-            'slide-up': 'slideUp 0.6s ease-out',
-          },
-          keyframes: {
-            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-            slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } }
+            xianxia: ['Ma Shan Zheng', 'STKaiti', 'KaiTi', 'serif']
           }
-        },
+        }
       }
     }
   </script>
-  <!-- 自定义工具类简化 -->
   <style type="text/tailwindcss">
     @layer utilities {
-      .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-      .card-hover { transition: all 0.3s ease; }
-      .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
-      .animate-float { animation: float 6s ease-in-out infinite; }
-      @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 0 5px theme('colors.glow');
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .animate-pulse-slow {
+        animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    @keyframes twinkle {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
-<body>
-  <!-- 头部导航 -->
-  <header class="fixed top-0 left-0 right-0 bg-pink/9 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center relative">
-      <!-- Logo部分（桌面端左对齐，移动端居中） -->
-      <div class="md:static absolute left-1/2 md:left-auto transform md:transform-none -translate-x-1/2 md:translate-x-0">
-        <p class="flex items-center space-x-2">
-          <img src="4581.jpg" width="30" height="30" alt="宣传图" class="rounded-2xl" loading="lazy">
-          <span class="text-primary text-2xl font-bold">冖井之旅</span>
-        </p>
+<body class="font-xianxia bg-gradient-to-b from-dark to-[#16213e] text-ink min-h-screen scroll-smooth bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><path fill=\"%23ffffff\" opacity=\"0.05\" d=\"M10,10 C20,30 40,20 50,30 C60,20 80,30 90,10 C80,40 90,60 70,50 C90,70 70,90 50,70 C30,90 10,70 30,50 C10,60 20,40 10,10 Z\"/></svg>')]">
+  <!-- 导航栏 -->
+  <header>
+    <nav id="navbar" class="bg-[rgba(26,26,46,0.8)] backdrop-blur-md py-4 px-4 fixed w-full top-0 z-50 border-b border-[rgba(233,196,106,0.3)] transition-all duration-300">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="https://www.vbn262.com/mj" target="_blank" class="flex items-center gap-3 transition-transform duration-300 group">
+          <img src="4581.jpg" width="40" height="40" alt="冖井之旅Logo" class="rounded-full border-2 border-secondary transition-transform duration-700 group-hover:rotate-360" loading="lazy">
+          <span class="text-2xl font-bold text-secondary text-shadow">冖井之旅</span>
+        </a>
+        <!-- 桌面导航 -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#trailer" class="text-light-darker hover:text-secondary transition-colors duration-300 relative py-2 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full">暂无宣传片</a>
+          <a href="#features" class="text-light-darker hover:text-secondary transition-colors duration-300 relative py-2 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full">游戏特色</a>
+          <a href="#download" class="text-light-darker hover:text-secondary transition-colors duration-300 relative py-2 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full">下载</a>
+          <a href="#about" class="text-light-darker hover:text-secondary transition-colors duration-300 relative py-2 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full">关于</a>
+        </div>
+        <!-- 移动端菜单按钮 -->
+        <button id="menu-toggle" class="md:hidden text-light-darker text-2xl transition-transform duration-300 hover:rotate-90 focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-      <!-- 移动端菜单按钮 -->
-      <button id="menu-toggle" class="md:hidden text-gray-700 hover:text-primary focus:outline-none"><i class="fa fa-bars text-xl"></i></button>
-      <!-- 桌面导航（右侧） -->
-      <nav class="hidden md:flex items-center space-x-8">
-        <a href="#web" class="hover:text-primary transition-colors">暂无宣传片</a><a href="#pw" class="hover:text-primary transition-colors">游戏特色</a>
-        <a href="#xz" class="hover:text-primary transition-colors">下载</a><a href="#about" class="hover:text-primary transition-colors">关于</a>
-      </nav>
-      <!-- 移动端占位元素（保持平衡） -->
-      <div class="md:hidden w-6"></div>
-    </div>
-    <!-- 移动端菜单（保持不变） -->
-    <div id="mobile-nav" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none">
-      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-        <a href="#web" class="hover:text-primary transition-colors">页游www.vbn262.com/mj</a><a href="#pw" class="hover:text-primary transition-colors">游戏特色</a>
-        <a href="#xz" class="hover:text-primary transition-colors">下载</a><a href="#about" class="hover:text-primary transition-colors">关于</a>
+      <!-- 移动端导航菜单 -->
+      <div id="mobile-menu" class="md:hidden hidden bg-[rgba(26,26,46,0.95)] border-t border-[rgba(233,196,106,0.3)] shadow-lg animate-fadeInDown">
+        <div class="container mx-auto py-4 px-4 flex flex-col gap-4">
+          <a href="#trailer" class="text-light-darker hover:text-secondary transition-colors py-2">暂无宣传片www.vbn262.com/mj</a>
+          <a href="#features" class="text-light-darker hover:text-secondary transition-colors py-2">游戏特色</a>
+          <a href="#download" class="text-light-darker hover:text-secondary transition-colors py-2">下载</a>
+          <a href="#about" class="text-light-darker hover:text-secondary transition-colors py-2">关于</a>
+        </div>
       </div>
-    </div>
+    </nav>
   </header>
   <main>
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-[#fff5f8] relative overflow-hidden">
-      <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" style="animation-delay: 0s"></div>
-      <div class="absolute -bottom-32 -left-16 w-80 h-80 bg-secondary/5 rounded-full blur-3xl animate-float" style="animation-delay: 2s"></div>
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div class="animate-slide-up">
-            <p class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight mb-6 text-shadow-lg">冖井之旅<br><span class="text-primary">探索神秘世界</span></p>
-            <p class="text-neutral text-lg md:text-xl mb-8 max-w-lg">踏上充满奇幻与冒险的旅程，探索未知领域，挑战强大敌人，解开古老谜团，在修仙世界中成就不朽传奇</p>
-            <div class="flex flex-wrap gap-4">
-              <a href="#xz" class="btn-primary flex items-center gap-2"><i class="fa fa-download"></i>立即下载</a>
-              <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" class="btn-secondary flex items-center gap-2"><i class="fa fa-play-circle"></i>暂无宣传片先观看我抖音</a>
-            </div>
-          </div>
-          <div class="animate-fade-in relative">
-            <img src="https://picsum.photos/id/237/800/600" alt="冖井之旅游戏截图" class="rounded-2xl shadow-2xl w-full max-w-lg mx-auto border-4 border-white shadow-xl">
-            <!-- 装饰元素 -->
-            <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-primary/20 rounded-lg -z-10"></div>
-            <div class="absolute -top-4 -left-4 w-16 h-16 bg-secondary/20 rounded-lg -z-10"></div>
+    <!-- 英雄区域 -->
+    <section class="hero pt-32 pb-20 px-4 relative overflow-hidden">
+      <div class="container mx-auto max-w-6xl">
+        <div class="flex flex-col items-center text-center">
+          <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold mb-6 text-secondary text-shadow leading-tight animate-fadeInUp">
+            冖井之旅<br><span class="text-ink">修仙问道</span>
+          </h1>
+          <p class="text-[clamp(1rem,2vw,1.25rem)] max-w-2xl mb-10 text-light-darker animate-fadeInUp" style="animation-delay: 0.3s">
+            踏上充满奇幻与冒险的修仙旅程，探索未知领域，挑战强大敌人，解开古老谜团，在修仙世界中成就不朽传奇
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp" style="animation-delay: 0.6s">
+            <a href="#download" class="btn-primary px-8 py-3 rounded-full font-bold inline-flex items-center gap-2 bg-accent text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 relative overflow-hidden group">
+              <i class="fas fa-download"></i> 立即下载
+              <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/20 transition-all duration-500 group-hover:left-[100%]"></span>
+            </a>
+            <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" class="btn-secondary px-8 py-3 rounded-full font-bold inline-flex items-center gap-2 bg-transparent text-secondary border-2 border-secondary transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/30 relative overflow-hidden group">
+              <i class="fas fa-play-circle"></i> 观看抖音
+              <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/20 transition-all duration-500 group-hover:left-[100%]"></span>
+            </a>
           </div>
         </div>
       </div>
     </section>
-    <!-- 页游宣传片 -->
-    <section id="web" class="px-4 mb-44">
-      <footer class="max-w-999px mx-auto border border-secondary text-center">
-        <div class="text-center mb-16 animate-fade-in">
-          <p class="text-[clamp(1.8rem,4vw,3rem)] font-bold mt-12"><span>暂无宣传片</span></p>
-          <div class="container mx-auto px-4 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div class="animate-fade-in">
-                <div class="relative">
-                  <img src="https://picsum.photos/id/239/800/600" alt="页游官网界面预览" class="rounded-2xl shadow-2xl w-full max-w-lg mx-auto">
-                </div>
-              </div>
-              <div>
-                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-6 mt-12"><span class="text-primary">页游官网</span><br>4399 小游戏平台</h2>
-                <p class="text-neutral text-lg mb-8">无需下载，直接在浏览器中体验冖井之旅，我们的网页版游戏支持所有现代浏览器，让您随时随地都能继续您的冒险旅程</p>
-                <div class="flex-wrap gap-4 mb-8">
-                  <div class="bg-white p-4 rounded-xl card-hover flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"><i class="fa fa-globe text-secondary text-xl"></i></div>
-                    <div><div class="text-dark font-bold"><span>随时畅玩无需下载，浏览器直接体验</span></div></div>
-                  </div>
-                  <div class="bg-white p-4 rounded-xl card-hover flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"><i class="fa fa-cloud text-primary"></i></div><span>无需安装</span>
-                  </div>
-                  <div class="bg-white p-4 rounded-xl card-hover flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"><i class="fa fa-save text-primary"></i></div><span>自动保存进度</span>
-                  </div>
-                </div>
-                <a href="https://www.4399.com/" target="_blank" class="inline-block px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-full font-medium transition-all duration-300 shadow-lg">开始网页版游戏</a>
-              </div>
-            </div>
+    <!-- 宣传片区域 -->
+    <section id="trailer" class="py-20 px-4">
+      <div class="container mx-auto max-w-6xl">
+        <h2 class="section-title text-[clamp(1.8rem,4vw,2.5rem)] text-center mb-12 text-secondary opacity-0 translate-y-10 transition-all duration-800">暂无宣传片</h2>
+        
+        <div class="flex flex-col items-center">
+          <div class="hero-image mb-10 opacity-0 translate-y-10 transition-all duration-800">
+            <img src="https://picsum.photos/id/237/800/600" alt="冖井之旅游戏截图" class="rounded-xl border-3 border-secondary shadow-xl hover:scale-[1.02] transition-all duration-500 max-w-full h-auto">
+          </div>
+          
+          <div class="about max-w-2xl text-center opacity-0 translate-y-10 transition-all duration-800">
+            <p class="mb-6 text-light-darker">游戏宣传片正在制作中，敬请期待...</p>
+            <p class="mb-8 text-light-darker">您可以先关注我们的抖音账号，获取最新游戏动态和开发进展</p>
+            <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-secondary text-secondary hover:bg-secondary/10 transition-all duration-300">
+              <i class="fab fa-tiktok"></i> 访问抖音账号
+            </a>
           </div>
         </div>
-      </footer>
+      </div>
     </section>
     <!-- 游戏特色 -->
-    <section id="pw" class="px-4 mb-44">
-      <footer class="max-w-999px mx-auto border border-secondary text-center">
-        <div class="text-center mb-16 animate-fade-in">
-          <p class="text-[clamp(1.8rem,4vw,3rem)] font-bold mt-12"><span class="text-primary">冖井之旅</span>游戏特色</p><p class="text-neutral max-w-2xl mx-auto text-lg">选择适合您设备的版本，开始您的冒险之旅</p>
-        </div>
-        <div class="container mx-auto px-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
-            <div class="bg-white rounded-2xl p-8 shadow-md card-hover animate-slide-up" style="animation-delay: 0.1s;">
-              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto"><i class="fa fa-paint-brush text-primary text-2xl"></i></div>
-              <h3 class="text-xl font-semibold text-center mb-4">沉浸式修仙</h3><p class="text-neutral text-center">体验真实的修仙境界提升，从炼气到飞升，感受境界突破的震撼</p>
+    <section id="features" class="py-20 px-4 bg-[rgba(26,26,46,0.3)]">
+      <div class="container mx-auto max-w-6xl">
+        <h2 class="section-title text-[clamp(1.8rem,4vw,2.5rem)] text-center mb-16 text-secondary opacity-0 translate-y-10 transition-all duration-800">
+          游戏特色
+          <span class="block w-24 h-1 bg-accent mx-auto mt-4 rounded-full"></span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- 特色卡片 1 -->
+          <div class="feature-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] opacity-0 translate-y-10 transition-all duration-600 relative overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:shadow-black/30">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-secondary"></div>
+            <div class="feature-icon text-4xl text-secondary mb-5 transition-all duration-300 hover:scale-110 hover:rotate-10">
+              <i class="fas fa-mountain"></i>
             </div>
-            <div class="bg-white rounded-2xl p-8 shadow-md card-hover animate-slide-up" style="animation-delay: 0.2s;">
-              <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 mx-auto"><i class="fa fa-gamepad text-secondary text-2xl"></i></div>
-              <h3 class="text-xl font-semibold text-center mb-4">创新玩法</h3><p class="text-neutral text-center">融合放置、策略与角色扮演元素，离线也能获得收益，轻松修仙</p>
+            <h3 class="text-xl font-bold mb-3 text-secondary">沉浸式修仙</h3>
+            <p class="text-light-darker">体验真实的修仙境界提升，从炼气到飞升，感受境界突破的震撼</p>
+          </div>
+          
+          <!-- 特色卡片 2 -->
+          <div class="feature-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] opacity-0 translate-y-10 transition-all duration-600 delay-100 relative overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:shadow-black/30">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-secondary"></div>
+            <div class="feature-icon text-4xl text-secondary mb-5 transition-all duration-300 hover:scale-110 hover:rotate-10">
+              <i class="fas fa-dragon"></i>
             </div>
-            <div class="bg-white rounded-2xl p-8 shadow-md card-hover animate-slide-up" style="animation-delay: 0.3s;">
-              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto"><i class="fa fa-users text-primary text-2xl"></i></div>
-              <h3 class="text-xl font-semibold text-center mb-4">社交互动</h3><p class="text-neutral text-center">加入仙门宗派，与好友组队探索秘境，挑战强大BOSS，共享修仙乐趣</p>
+            <h3 class="text-xl font-bold mb-3 text-secondary">灵兽培养</h3>
+            <p class="text-light-darker">捕捉培养各种珍稀灵兽，与它们并肩作战，共同成长</p>
+          </div>
+          
+          <!-- 特色卡片 3 -->
+          <div class="feature-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] opacity-0 translate-y-10 transition-all duration-600 delay-200 relative overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:shadow-black/30">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-secondary"></div>
+            <div class="feature-icon text-4xl text-secondary mb-5 transition-all duration-300 hover:scale-110 hover:rotate-10">
+              <i class="fas fa-users"></i>
             </div>
-            <div class="bg-white rounded-2xl p-8 shadow-md card-hover animate-slide-up" style="animation-delay: 0.4s;">
-              <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 mx-auto"><i class="fa fa-map text-secondary text-2xl"></i></div>
-              <h3 class="text-xl font-semibold text-center mb-4">广阔世界</h3><p class="text-neutral text-center">探索数十个风格各异的修仙场景，从凡人界到仙界，感受不同的风土人情</p>
+            <h3 class="text-xl font-bold mb-3 text-secondary">仙门宗派</h3>
+            <p class="text-light-darker">加入仙门宗派，与道友组队探索秘境，挑战强大BOSS</p>
+          </div>
+          
+          <!-- 特色卡片 4 -->
+          <div class="feature-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] opacity-0 translate-y-10 transition-all duration-600 delay-300 relative overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:shadow-black/30">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-secondary"></div>
+            <div class="feature-icon text-4xl text-secondary mb-5 transition-all duration-300 hover:scale-110 hover:rotate-10">
+              <i class="fas fa-map"></i>
             </div>
-            
-            <div class="bg-white rounded-2xl p-8 shadow-md card-hover animate-slide-up" style="animation-delay: 0.5s;">
-              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto"><i class="fa fa-magic text-primary text-2xl"></i></div>
-              <h3 class="text-xl font-semibold text-center mb-4">法术神通</h3><p class="text-neutral text-center">学习数百种法术神通，搭配不同灵根属性，打造属于自己的独特修仙道路</p>
+            <h3 class="text-xl font-bold mb-3 text-secondary">广阔世界</h3>
+            <p class="text-light-darker">探索数十个风格各异的修仙场景，从凡人界到仙界，感受不同的风土人情</p>
+          </div>
+          
+          <!-- 特色卡片 5 -->
+          <div class="feature-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] opacity-0 translate-y-10 transition-all duration-600 delay-400 relative overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:shadow-black/30">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-secondary"></div>
+            <div class="feature-icon text-4xl text-secondary mb-5 transition-all duration-300 hover:scale-110 hover:rotate-10">
+              <i class="fas fa-wind"></i>
             </div>
+            <h3 class="text-xl font-bold mb-3 text-secondary">法术神通</h3>
+            <p class="text-light-darker">学习数百种法术神通，搭配不同灵根属性，打造属于自己的独特修仙道路</p>
+          </div>
+          
+          <!-- 特色卡片 6 -->
+          <div class="feature-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] opacity-0 translate-y-10 transition-all duration-600 delay-500 relative overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:shadow-black/30">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-secondary"></div>
+            <div class="feature-icon text-4xl text-secondary mb-5 transition-all duration-300 hover:scale-110 hover:rotate-10">
+              <i class="fas fa-gem"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-secondary">炼器炼丹</h3>
+            <p class="text-light-darker">收集天材地宝，炼制神兵利器与灵丹妙药，提升自身实力</p>
           </div>
         </div>
-        <!-- PC -->
-        <div class="container mx-auto px-4">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="order-2 lg:order-1">
-              <p class="text-[clamp(1.8rem,4vw,3rem)] font-bold mt-6 mb-6"><span class="text-primary">PC 官网</span><br>更丰富的游戏体验</p>
-              <p class="text-neutral text-lg mb-8">访问我们的PC官网，获取最新游戏资讯、攻略指南和独家活动。在更大的屏幕上体验冖井之旅的精彩内容，享受更流畅的游戏体验</p>
-              <div class="grid">
-                <p class="text-xl mb-4"><i class="fa fa-trophy text-secondary"></i>全平台直播参与速通比赛赢取大奖</p>
-                <a href="https://store.steampowered.com/" target="_blank" class="inline-block px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-full font-medium transition-all duration-300 shadow-lg mb-1">Steam 平台</a>
-                <a href="https://store.epicgames.com/zh-CN/" target="_blank" class="inline-block px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-full font-medium transition-all duration-300 shadow-lg mt-2 md:mt-0 mb-4">Epic Games</a>
-              </div>
-            </div>
-            <div class="order-1 lg:order-2 relative animate-fade-in">
-              <div class="relative"><img src="https://picsum.photos/id/119/800/600" alt="PC官网界面预览" class="rounded-2xl shadow-2xl w-full max-w-lg mx-auto"></div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      </div>
     </section>
-    <!-- 下载区 -->
-    <section id="xz" class="px-4 mb-44">
-      <footer class="max-w-999px mx-auto border border-secondary text-center">
-        <div class="container mx-auto px-4 mt-12">
-          <p class="text-center animate-fade-in text-[clamp(1.8rem,4vw,3rem)] font-bold mt-9">立即下载 </p>
-          <div class="text-center mt-5 mb-8 text-neutral text-sm"><i class="fas fa-hourglass-half mr-1"></i> 所有版本暂无，敬请期待</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <!-- Android下载卡片 -->
-            <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 card-hover">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4"><i class="fa fa-android text-neutral text-xl"></i></div>
-                <div><h3 class="font-semibold text-lg text-dark">Android 版本</h3><p class="text-sm text-neutral">体验极简美学游戏</p></div>
-              </div>
-              <a href="#" class="block w-full py-3 bg-gray-100 hover:bg-gray-200 text-center rounded-lg transition-colors">下载 APK</a>
+    <!-- 下载区域 -->
+    <section id="download" class="py-20 px-4">
+      <div class="container mx-auto max-w-6xl">
+        <h2 class="section-title text-[clamp(1.8rem,4vw,2.5rem)] text-center mb-10 text-secondary opacity-0 translate-y-10 transition-all duration-800">
+          立即下载
+          <span class="block w-24 h-1 bg-accent mx-auto mt-4 rounded-full"></span>
+        </h2>
+        
+        <p class="text-center mb-12 text-light-darker opacity-0 translate-y-10 transition-all duration-800 delay-100">
+          <i class="fas fa-hourglass-half mr-2"></i>所有版本暂无，敬请期待
+        </p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <!-- 下载卡片 1 -->
+          <div class="download-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] text-center opacity-0 translate-y-10 transition-all duration-600 hover:-translate-y-2 hover:shadow-lg hover:shadow-secondary/15 hover:border-secondary/40">
+            <div class="download-icon text-4xl text-secondary mb-4 transition-transform duration-300 hover:scale-125">
+              <i class="fab fa-steam"></i>
             </div>
-            <!-- iOS下载卡片 -->
-            <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 card-hover">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4"><i class="fa fa-apple text-neutral text-xl"></i></div>
-                <div><h3 class="font-semibold text-lg text-dark">iOS 版本</h3><p class="text-sm text-neutral">享受简约游戏乐趣</p></div>
-              </div>
-              <a href="#" class="block w-full py-3 bg-gray-100 hover:bg-gray-200 text-center rounded-lg transition-colors">App Store 下载</a>
+            <p class="text-light-darker mb-5">单机游戏</p>
+            <a href="https://store.steampowered.com/" target="_blank" class="block bg-secondary text-dark py-3 rounded-lg font-bold transition-all duration-300 hover:bg-[#d4ac54] hover:-translate-y-1 relative overflow-hidden group">
+              Steam 平台
+              <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/30 transition-all duration-500 group-hover:left-[100%]"></span>
+            </a>
+          </div>
+          
+          <!-- 下载卡片 2 -->
+          <div class="download-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] text-center opacity-0 translate-y-10 transition-all duration-600 delay-100 hover:-translate-y-2 hover:shadow-lg hover:shadow-secondary/15 hover:border-secondary/40">
+            <div class="download-icon text-4xl text-secondary mb-4 transition-transform duration-300 hover:scale-125">
+              <i class="fab fa-epicgames"></i>
             </div>
+            <p class="text-light-darker mb-5">单机游戏</p>
+            <a href="https://store.epicgames.com/zh-CN/" target="_blank" class="block bg-secondary text-dark py-3 rounded-lg font-bold transition-all duration-300 hover:bg-[#d4ac54] hover:-translate-y-1 relative overflow-hidden group">
+              Epic Games
+              <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/30 transition-all duration-500 group-hover:left-[100%]"></span>
+            </a>
+          </div>
+          
+          <!-- 下载卡片 3 -->
+          <div class="download-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] text-center opacity-0 translate-y-10 transition-all duration-600 delay-200 hover:-translate-y-2 hover:shadow-lg hover:shadow-secondary/15 hover:border-secondary/40">
+            <div class="download-icon text-4xl text-secondary mb-4 transition-transform duration-300 hover:scale-125">
+              <i class="fab fa-android"></i>
+            </div>
+            <h3 class="text-secondary mb-2">Android 版本</h3>
+            <p class="text-light-darker mb-5">游戏非常休闲</p>
+            <a href="#" class="block bg-secondary text-dark py-3 rounded-lg font-bold transition-all duration-300 hover:bg-[#d4ac54] hover:-translate-y-1 relative overflow-hidden group">
+              下载 APK
+              <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/30 transition-all duration-500 group-hover:left-[100%]"></span>
+            </a>
+          </div>
+          
+          <!-- 下载卡片 4 -->
+          <div class="download-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] text-center opacity-0 translate-y-10 transition-all duration-600 delay-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-secondary/15 hover:border-secondary/40">
+            <div class="download-icon text-4xl text-secondary mb-4 transition-transform duration-300 hover:scale-125">
+              <i class="fab fa-apple"></i>
+            </div>
+            <h3 class="text-secondary mb-2">iOS 版本</h3>
+            <p class="text-light-darker mb-5">游戏非常休闲</p>
+            <a href="#" class="block bg-secondary text-dark py-3 rounded-lg font-bold transition-all duration-300 hover:bg-[#d4ac54] hover:-translate-y-1 relative overflow-hidden group">
+              App Store 下载
+              <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/30 transition-all duration-500 group-hover:left-[100%]"></span>
+            </a>
+          </div>
+          
+          <!-- 下载卡片 5 -->
+          <div class="download-card bg-[rgba(26,26,46,0.6)] rounded-xl p-6 border border-[rgba(233,196,106,0.2)] text-center opacity-0 translate-y-10 transition-all duration-600 delay-400 hover:-translate-y-2 hover:shadow-lg hover:shadow-secondary/15 hover:border-secondary/40 col-span-1 sm:col-span-2 lg:col-span-1 mx-auto">
+            <div class="download-icon text-4xl text-secondary mb-4 transition-transform duration-300 hover:scale-125">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <h3 class="text-secondary mb-2">页游官网</h3>
+            <p class="text-light-darker mb-5">享受简约游戏乐趣</p>
+            <a href="https://www.4399.com" target="_blank" class="block bg-secondary text-dark py-3 rounded-lg font-bold transition-all duration-300 hover:bg-[#d4ac54] hover:-translate-y-1 relative overflow-hidden group">
+              4399小游戏平台
+              <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/30 transition-all duration-500 group-hover:left-[100%]"></span>
+            </a>
           </div>
         </div>
-      </footer>
+      </div>
     </section>
-  </main>
-  <!-- 关于我们 -->
-  <section id="about" class="px-4 mb-44">
-    <footer class="max-w-999px mx-auto border border-secondary text-center">
+    <!-- 关于我们 -->
+    <section id="about" class="py-20 px-4 bg-[rgba(26,26,46,0.3)]">
+      <div class="container mx-auto max-w-6xl text-center border border-secondary">
       <p class="text-4xl font-bold mb-6 pt-20">关于我们</p><p class="text-text mb-4">风鸣玄太工作室成立于2025年，主业网页开发，游戏开发，动漫制作，干销售只要能销售不触犯法律的都卖</p>
       <img src="4581.jpg" width="300" height="300" alt="宣传图" class="rounded-2xl mx-auto animate-float" loading="lazy">
       <div class="flex justify-center gap-6 mb-4">
@@ -226,78 +322,124 @@
       <a href="https://www.piyao.org.cn/yybgt/index.htm" target="_blank"><p class="mb-2">网络谣言曝光台</p></a>
       <a href="https://www.12377.cn/" target="_blank"><p class="mb-2">违法和不良信息举报中心</p></a>
       <a href="https://beian.miit.gov.cn" target="_blank"><p class="mb-2 border-t">Copyright © vbn262.com 风鸣玄太工作室 版权所有 2025-现在</p>鲁ICP备2025163733号-1</a>
-    </footer>
-  </section>
-  <!-- 返回顶部按钮 -->
-  <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-primary/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform scale-0 transition-all duration-300 z-50"><i class="fa fa-arrow-up"></i></button>
+      </div>
+    </section>
+  </main>
+  <!-- 回到顶部按钮 -->
+  <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-secondary text-dark w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg shadow-secondary/30 opacity-0 invisible transition-all duration-300 hover:bg-[#d4ac54] hover:scale-110 z-50">
+    <i class="fas fa-arrow-up"></i>
+  </a>
   <script>
-    // 获取DOM元素
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-    const navbar = document.getElementById('navbar');
-    const backToTopBtn = document.getElementById('back-to-top');
+    // 创建随机星星背景
+    function createStars() {
+      const hero = document.querySelector('.hero');
+      const starCount = 50;
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        // 随机大小
+        const size = Math.random() * 3 + 1;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        // 随机位置
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        // 随机延迟
+        star.style.animationDelay = `${Math.random() * 2}s`;
+        // 设置星星样式
+        star.style.position = 'absolute';
+        star.style.background = 'var(--secondary)';
+        star.style.borderRadius = '50%';
+        star.style.animation = 'twinkle 2s infinite alternate';
+        hero.appendChild(star);
+      }
+    }
     // 移动端菜单切换
-    menuToggle.addEventListener('click', () => {
-      mobileNav.classList.toggle('opacity-0');
-      mobileNav.classList.toggle('-translate-y-full');
-      mobileNav.classList.toggle('pointer-events-none');
-      mobileNav.classList.toggle('opacity-100');
-      mobileNav.classList.toggle('translate-y-0');
-      mobileNav.classList.toggle('pointer-events-auto');
-      menuToggle.querySelector('i').classList.toggle('fa-bars');
-      menuToggle.querySelector('i').classList.toggle('fa-times');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      const icon = menuToggle.querySelector('i');
+      if (!mobileMenu.classList.contains('hidden')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
     });
-    // 滚动时导航栏样式变化
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('bg-pink/15', window.scrollY > 50);
-      navbar.classList.toggle('bg-pink/9', window.scrollY <= 50);
-      navbar.classList.toggle('shadow', window.scrollY > 50);
-      // 显示/隐藏返回顶部按钮
-      backToTopBtn.classList.toggle('scale-100', window.scrollY > 300);
-      backToTopBtn.classList.toggle('scale-0', window.scrollY <= 300);
+    // 滚动监听 - 导航栏样式变化
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function() {
+      // 导航栏滚动效果
+      if (window.scrollY > 50) {
+        navbar.classList.add('py-2', 'bg-[rgba(26,26,46,0.95)]', 'shadow-lg');
+        navbar.classList.remove('py-4', 'bg-[rgba(26,26,46,0.8)]');
+      } else {
+        navbar.classList.add('py-4', 'bg-[rgba(26,26,46,0.8)]');
+        navbar.classList.remove('py-2', 'bg-[rgba(26,26,46,0.95)]', 'shadow-lg');
+      }
+      // 回到顶部按钮显示/隐藏
+      if (window.scrollY > 500) {
+        backToTop.classList.add('opacity-100', 'visible');
+        backToTop.classList.remove('opacity-0', 'invisible');
+      } else {
+        backToTop.classList.add('opacity-0', 'invisible');
+        backToTop.classList.remove('opacity-100', 'visible');
+      }
+      // 滚动动画
+      animateOnScroll();
     });
-    // 点击移动端菜单项后关闭菜单
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (!mobileNav.classList.contains('opacity-0')) {
-          mobileNav.classList.add('opacity-0', '-translate-y-full', 'pointer-events-none');
-          mobileNav.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
-          menuToggle.querySelector('i').classList.remove('fa-times');
-          menuToggle.querySelector('i').classList.add('fa-bars');
-        }
-      });
-    });
-    // 返回顶部功能
-    backToTopBtn.addEventListener('click', () => {window.scrollTo({ top: 0, behavior: 'smooth' });});
-    // 平滑滚动到锚点
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {e.preventDefault();
-        const targetId = this.getAttribute('href');if (targetId === '#') return;
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {targetElement.scrollIntoView({ behavior: 'smooth' });}
-      });
-    });
-    // 初始化动画元素
-    const animateElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up');
-    animateElements.forEach(el => {el.style.opacity = '0';
-      el.style.transition = 'opacity 0.8s ease-in-out, transform 0.6s ease-out';
-      if (el.classList.contains('animate-slide-up')) el.style.transform = 'translateY(20px)';
-    });
-    // 滚动时触发动画
-    const checkAnimation = () => {
-      animateElements.forEach(element => {
+    // 滚动时元素动画
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.section-title, .feature-card, .download-card, .about, .hero-image');
+      elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight / 1.3;
-        if (elementTop < screenHeight) {element.style.opacity = '1';
-          if (element.classList.contains('animate-slide-up')) element.style.transform = 'translateY(0)';
+        const elementVisible = 150;
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('opacity-100', 'translate-y-0');
+          element.classList.remove('opacity-0', 'translate-y-10');
         }
       });
-    };
-    // 页面加载和滚动时检查动画
-    window.addEventListener('DOMContentLoaded', checkAnimation);
-    window.addEventListener('scroll', checkAnimation);
+    }
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        // 关闭移动菜单（如果打开）
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          const icon = menuToggle.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+        const targetId = this.getAttribute('href');
+        // 回到顶部
+        if (targetId === '#') {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+          return;
+        }
+        // 滚动到目标位置
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // 初始化
+    window.addEventListener('DOMContentLoaded', function() {
+      createStars();
+      // 触发一次滚动检查以显示初始可见元素
+      setTimeout(animateOnScroll, 300);
+    });
   </script>
 </body>
 </html>
-
-
