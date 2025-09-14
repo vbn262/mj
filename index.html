@@ -5,11 +5,6 @@
   <meta name="description" content="冖井之旅www.vbn262.com/mj - 探索神秘修仙世界，体验沉浸式修仙冒险，从炼气到飞升，成就不朽传奇">
   <meta name="author" content="冖井之旅www.vbn262.com/mj"><meta name="keywords" content="冖井之旅www.vbn262.com/mj, 修仙游戏, 角色扮演, 仙侠, 游戏下载">
   <meta name="robots" content="index, follow"><title>冖井之旅www.vbn262.com/mj</title>
-  <!-- 预加载关键资源 -->
-  <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- 外部资源 -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
@@ -209,28 +204,27 @@
   <!-- 页面顶部锚点 -->
   <div id="page-top"></div>
   <!-- 导航栏 -->
-  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <nav class="py-2 px-4 w-full top-0 z-99 bg-[rgba(26,27,45,0)] backdrop-blur transition-all duration-300 hover:bg-[rgba(26,27,45,0.5)]">
+  <header class="fixed top-0 left-0 right-0 z-50  bg-[rgba(26,27,45,0)] backdrop-blur transition-all duration-300 hover:bg-[rgba(26,27,45,0.5)]">
+    <nav class="py-2 px-4 max-w-[999px] mx-auto w-full">
       <div class="container mx-auto flex justify-between items-center">
         <a href="https://www.vbn262.com/mj" class="flex items-center gap-3 transition-transform duration-300 group">
-          <img src="4581.jpg" width="40" height="40" alt="冖井之旅Logo" class="rounded-full border-2 border-secondary transition-transform duration-700 group-hover:rotate-360" loading="lazy">
+          <img src="https://vbn262.github.io/4581.jpg" width="40" height="40" alt="Logo" class="rounded-full border-2 border-secondary transition-transform duration-700 group-hover:rotate-360" loading="lazy">
           <span class="text-2xl font-bold text-secondary text-shadow">冖井之旅</span>
         </a>
         <!-- 桌面导航 -->
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#trailer" class="hover:text-secondary transition-colors">暂无宣传片</a>
-          <a href="#features" class="hover:text-secondary transition-colors">游戏特色</a>
-          <a href="#download" class="hover:text-secondary transition-colors">下载</a>
-          <a href="#about" class="hover:text-secondary transition-colors">关于</a>
-        </div>
-        <!-- 移动端菜单按钮 -->
+        <div class="flex items-center gap-8">
+          <a href="#" class="hidden md:block hover:text-secondary transition-colors">www.vbn262.com/mj</a>
+          <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer"  class="hidden md:block hover:text-secondary transition-colors">关注抖音</a>
+          <!-- 移动端菜单按钮 -->
         <button id="menu-toggle" class="md:flex nav-toggle text-light">
           <i class="fas fa-bars" style="font-size: 1.5rem;"></i>
         </button>
+        </div>
+        
       </div>
       <!-- 移动端导航菜单 -->
       <div class="mobile-nav md:hidden text-center" id="mobile-nav">
-        <h3><a href="#trailer">暂无宣传片www.vbn262.com/mj</a></h3>
+        <h3><a href="#trailer">暂无宣传片</a></h3>
         <h3><a href="#features">游戏特色</a></h3>
         <h3><a href="#download">下载</a></h3>
         <h3><a href="#about">关于</a></h3>
@@ -307,7 +301,7 @@
           <!-- 特色5 -->
           <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
             <div class="text-secondary text-4xl mb-4">
-              <i class="fas fa-map"></i>
+              <i class="fas fa-flask"></i>
             </div>
             <h3 class="text-2xl font-bold mb-3 text-white">炼丹炼器</h3>
             <p class="text-text">完善的炼丹、炼器系统，亲手打造神兵利器、绝世丹药，提升修为，闯荡江湖</p>
@@ -316,7 +310,7 @@
           <!-- 特色6 -->
           <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
             <div class="text-secondary text-4xl mb-4">
-              <i class="fas fa-cloud-meatball"></i>
+              <i class="fas fa-star"></i>
             </div>
             <h3 class="text-2xl font-bold mb-3 text-white">仙缘奇遇</h3>
             <p class="text-text">丰富多彩的随机事件，偶遇仙人指点、获得上古传承，你的每一个选择都将改变命运</p>
@@ -328,7 +322,7 @@
     <section id="download" class="py-20 px-4 bg-[rgba(26,26,46,0.7)]">
       <div class="mx-auto py-4 max-w-6xl text-center border border-secondary rounded-2xl">
         <h2 class="text-4xl font-bold mt-6 mb-12 text-center text-secondary text-shadow">开始修仙之旅</h2>
-        <img src="4581.jpg" width="300" height="100%" alt="冖井之旅Logo" class="mx-auto border-2 border-secondary animate-float" loading="lazy">
+        <img src="https://vbn262.github.io/4581.jpg" width="300" height="100%" alt="冖井之旅Logo" class="mx-auto border-2 border-secondary animate-float" loading="lazy">
         <span class="text-4xl font-bold mt-12 mt-6 text-center text-secondary text-shadow">冖井之旅 v1.0.0</span>
         <div class="container mx-auto relative p-4">
           <div class="relative overflow-hidden w-full max-w-3xl mx-auto">
@@ -390,7 +384,7 @@
     <section id="about" class="py-20 px-4 bg-[rgba(26,26,46,0.7)]">
       <div class="mx-auto max-w-6xl text-center border border-secondary">
         <p class="text-4xl font-bold mb-6 pt-20">关于我们</p><p class="text-text mb-4">风鸣玄太工作室成立于2025年，主业网页开发，游戏开发，动漫制作，干销售只要能销售不触犯法律的都卖</p>
-        <img src="4581.jpg" width="300" height="300" alt="宣传图" class="mx-auto border-2 border-secondary animate-float" loading="lazy">
+        <img src="https://vbn262.github.io/4581.jpg" width="300" height="300" alt="宣传图" class="mx-auto border-2 border-secondary animate-float" loading="lazy">
         <div class="flex justify-center gap-6 mb-4">
            <a href="https://space.bilibili.com/1414517639" target="_blank" rel="noopener noreferrer" title="Bilibili"><i class="fab fa-bilibili text-3xl"></i></a>
            <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer" title="抖音"><i class="fab fa-tiktok text-3xl"></i></a>
@@ -472,4 +466,3 @@
   </script>
 </body>
 </html>
-
