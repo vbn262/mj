@@ -54,19 +54,15 @@
             .content-auto {
                 content-visibility: auto;
             }
-
             .text-shadow {
                 text-shadow: 0 0 8px;
             }
-
             .animate-fadeInUp {
                 animation: fadeInUp 0.5s ease-out forwards;
             }
-
             .animate-fadeInDown {
                 animation: fadeInDown 0.5s ease-out forwards;
             }
-
             .backdrop-blur {
                 backdrop-filter: blur(8px);
             }
@@ -104,7 +100,6 @@
             gap: 8px;
             transition: background-color 0.3s;
         }
-
             .nav-toggle:hover {
                 background-color: rgba(255, 255, 255, 0.1);
             }
@@ -115,18 +110,15 @@
             text-align: center;
             border-top: 1px solid var(--border-color);
         }
-
             .mobile-nav.active {
                 display: block;
                 animation: fadeIn 0.5s ease-in-out forwards;
             }
-
             .mobile-nav h3 a {
                 display: block;
                 padding: 12px;
                 transition: all 0.3s;
             }
-
                 .mobile-nav h3 a:hover {
                     background-color: rgba(233, 196, 106, 0.1);
                     color: #e9c46a;
@@ -187,7 +179,6 @@
             text-decoration: none;
             transition: color 0.3s;
         }
-
             nav a:hover {
                 color: #e9c46a;
             }
@@ -205,7 +196,6 @@
             text-decoration: none;
             transition: all 0.3s;
         }
-
             a:hover {
                 color: #fff;
             }
@@ -394,7 +384,8 @@
         <!-- 关于我们区域 -->
         <section id="about" class="py-20 px-4 bg-[rgba(26,26,46,0.7)]">
             <div class="mx-auto max-w-6xl text-center border border-secondary">
-                <p class="text-4xl font-bold mb-6 pt-20">关于我们</p><p class="text-text mb-4">风鸣玄太工作室成立于2025年，主业网页开发，游戏开发，动漫制作，干销售只要能销售不触犯法律的都卖</p>
+                <p class="text-4xl font-bold mb-6 pt-20">关于我们</p>
+                <p class="text-text mb-4">风鸣玄太工作室成立于2025年，主业网页开发，游戏开发，动漫制作，干销售只要能销售不触犯法律的都卖</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-9 mb-12" style="margin: 0 auto;max-width: 999px;">
                     <div>
                         <h4 class="flex mb-4" style="color: #f0f0f0; justify-content: center;">风鸣玄太工作室</h4>
@@ -422,8 +413,8 @@
                         <li><a href="https://beian.miit.gov.cn" target="_blank" class="flex justify-center text-gray-400">ICP备案查询</a></li>
                     </ul>
                 </div>
-                <h5 class="mb-2 border-t">Copyright © vbn262.com 风鸣玄太工作室 版权所有 2025-现在<br>鲁ICP备2025163733号-1</h5>
             </div>
+            <h5 class="mb-2 border-t">Copyright © vbn262.com 风鸣玄太工作室 版权所有 2025-现在<br>鲁ICP备2025163733号-1</h5>
         </section>
     </main>
     <!-- 回到顶部按钮 -->
@@ -483,7 +474,6 @@
                 }
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
