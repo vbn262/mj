@@ -54,15 +54,19 @@
             .content-auto {
                 content-visibility: auto;
             }
+
             .text-shadow {
                 text-shadow: 0 0 8px;
             }
+
             .animate-fadeInUp {
                 animation: fadeInUp 0.5s ease-out forwards;
             }
+
             .animate-fadeInDown {
                 animation: fadeInDown 0.5s ease-out forwards;
             }
+
             .backdrop-blur {
                 backdrop-filter: blur(8px);
             }
@@ -74,12 +78,15 @@
             --border-color: rgba(233, 196, 106, 0.3);
             --light-pink: rgba(26, 26, 46, 0.9);
         }
-
         body {
-            font-family: 'ZCOOL QingKe HuangYou', sans-serif;
-            background: linear-gradient(135deg, #5a558a, #7b76b3, #6a6a96);
-            color: #e6e1cf;
+            background-image: url('https://vbn262.github.io/1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             min-height: 100vh;
+            font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+            color: #e6e1cf;
             margin: 0;
             padding: 0;
         }
@@ -100,6 +107,7 @@
             gap: 8px;
             transition: background-color 0.3s;
         }
+
             .nav-toggle:hover {
                 background-color: rgba(255, 255, 255, 0.1);
             }
@@ -110,15 +118,18 @@
             text-align: center;
             border-top: 1px solid var(--border-color);
         }
+
             .mobile-nav.active {
                 display: block;
                 animation: fadeIn 0.5s ease-in-out forwards;
             }
+
             .mobile-nav h3 a {
                 display: block;
                 padding: 12px;
                 transition: all 0.3s;
             }
+
                 .mobile-nav h3 a:hover {
                     background-color: rgba(233, 196, 106, 0.1);
                     color: #e9c46a;
@@ -205,8 +216,8 @@
     <!-- 页面顶部锚点 -->
     <div id="page-top"></div>
     <!-- 导航栏 -->
-    <header class="fixed top-0 left-0 right-0 z-50  bg-[rgba(26,27,45,0)] backdrop-blur transition-all duration-300 hover:bg-[rgba(26,27,45,0.5)]">
-        <nav class="py-2 px-4 max-w-[999px] mx-auto w-full">
+    <header class="py-2 px-4 fixed top-0 left-0 right-0 z-50 hover:bg-[rgba(26,27,45,0.5)] transition-all duration-300">
+        <nav class="mx-auto" style="max-width: 1610px; margin-bottom: 9px; text-align: center;">
             <div class="container mx-auto flex justify-between items-center">
                 <a href="https://www.vbn262.com/mj" class="flex items-center gap-3 transition-transform duration-300 group">
                     <img src="https://vbn262.github.io/4581.jpg" width="40" height="40" alt="Logo" class="rounded-full border-2 border-secondary transition-transform duration-700 group-hover:rotate-360" loading="lazy">
@@ -232,10 +243,10 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="bodyyy">
         <!-- 英雄区域 -->
-        <section class="hero px-4 relative overflow-hidden bg-[rgba(26,26,46,0.7)] min-h-screen flex items-center pt-20">
-            <div class="mx-auto max-w-6xl">
+        <section class="px-4 relative overflow-hidden bg-[rgba(26,26,46,0.7)] min-h-screen flex items-center pt-20">
+            <div class="mx-auto">
                 <div class="flex flex-col items-center text-center">
                     <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold mb-6 text-[#e9c46a] text-shadow leading-tight animate-fadeInUp">
                         冖井之旅<br><span class="text-[#e6e1cf]">修仙问道</span>
@@ -260,9 +271,9 @@
         </section>
         <!-- 游戏特色区域 (新增) -->
         <section id="features" class="py-20 px-4">
-            <div class="mx-auto max-w-6xl">
+            <div class="mx-auto" style="max-width: 1610px; margin-bottom: 9px; text-align: center;">
                 <h2 class="text-4xl font-bold mb-16 text-center text-secondary text-shadow">游戏特色</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- 特色1 -->
                     <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
                         <div class="text-secondary text-4xl mb-4">
@@ -320,8 +331,8 @@
             </div>
         </section>
         <!-- 下载区域 -->
-        <section id="download" class="py-20 px-4 bg-[rgba(26,26,46,0.7)]">
-            <div class="mx-auto py-4 max-w-6xl text-center border border-secondary rounded-2xl">
+        <section id="download" class="py-20 px-4">
+            <div class="mx-auto py-4 bg-[rgba(26,26,46,0.7)] text-center border border-secondary rounded-2xl" style="max-width: 1610px; margin-bottom: 9px; text-align: center;">
                 <h2 class="text-4xl font-bold mt-6 mb-12 text-center text-secondary text-shadow">开始修仙之旅</h2>
                 <img src="https://vbn262.github.io/4581.jpg" width="199" height="199" alt="Logo" class="mx-auto border-2 border-secondary animate-float" loading="lazy">
                 <span class="text-4xl font-bold mt-12 mt-6 text-center text-secondary text-shadow">冖井之旅 v1.0.0</span>
@@ -367,7 +378,7 @@
         </section>
         <!-- 宣传片区域 -->
         <section id="trailer" class="py-20 px-4">
-            <div class="mx-auto bg-[rgba(26,26,46,0.7)] py-4 max-w-6xl text-center border border-secondary rounded-2xl">
+            <div class="mx-auto bg-[rgba(26,26,46,0.7)] py-4 text-center border border-secondary rounded-2xl" style="max-width: 1610px; margin-bottom: 9px; text-align: center;">
                 <h2 class="text-4xl font-bold mt-12 mb-12 text-secondary text-shadow">游戏宣传片</h2>
                 <div class="mx-auto max-w-xl relative p-4">
                     <i class="fas fa-film text-6xl text-secondary/50 mb-6"></i>
@@ -382,8 +393,8 @@
             </div>
         </section>
         <!-- 关于我们区域 -->
-        <section id="about" class="py-20 px-4 bg-[rgba(26,26,46,0.7)]">
-            <div class="mx-auto max-w-6xl text-center border border-secondary">
+        <section id="about" class="py-20 px-4">
+            <div class="bg-[rgba(26,26,46,0.7)] mx-auto border border-secondary" style="max-width: 1610px; margin-bottom: 9px; text-align: center;">
                 <p class="text-4xl font-bold mb-6 pt-20">关于我们</p>
                 <p class="text-text mb-4">风鸣玄太工作室成立于2025年，主业网页开发，游戏开发，动漫制作，干销售只要能销售不触犯法律的都卖</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-9 mb-12" style="margin: 0 auto;max-width: 999px;">
@@ -486,8 +497,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
