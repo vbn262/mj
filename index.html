@@ -223,31 +223,29 @@
     <!-- 页面顶部锚点 -->
     <div id="page-top"></div>
     <!-- 导航栏 -->
-    <header class="py-2 px-4 fixed top-0 left-0 right-0 z-50 hover:bg-[rgba(26,27,45,0.5)] transition-all duration-300">
-        <nav class="mx-auto" style="max-width: 1610px; margin-bottom: 9px; text-align: center;">
-            <div class="container mx-auto flex justify-between items-center">
-                <div class="flex items-center gap-3 transition-transform duration-300 group">
-                    <!-- 移动端菜单按钮 -->
-                    <button id="menu-toggle" class="md:flex nav-toggle text-light">
-                        <i class="fas fa-bars" style="font-size: 1.5rem;"></i>
-                    </button>
-                    <img src="https://vbn262.github.io/4581.jpg" width="40" height="40" alt="Logo" class="rounded-full border-2 border-secondary transition-transform duration-700 group-hover:rotate-360" loading="lazy">
-                    <span class="text-2xl font-bold text-secondary text-shadow">冖井之旅</span>
-                </div>
-                <!-- 桌面导航 -->
-                <div class="flex items-center gap-8">
-                    <a href="https://vbn262.github.io/mj" class="hidden md:block hover:text-secondary transition-colors">www.vbn262.com/mj</a>
-                    <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer" class="hidden md:block hover:text-secondary transition-colors">关注抖音</a>
-                </div>
+    <header class="fixed py-2 px-4 top-0 left-0 right-0 z-50 bg-[rgba(26,27,45,0.5)]">
+        <div class="mx-auto flex justify-between items-center" style="width: 100%; max-width: 1311px; margin-bottom: 9px; text-align: center;">
+            <div class="flex justify-between items-center gap-3">
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:flex nav-toggle text-light">
+                    <i class="fas fa-bars" style="font-size: 1.5rem;"></i>
+                </button>
+                <img src="https://vbn262.github.io/4581.jpg" width="40" height="40" alt="Logo" class="rounded-full border-2 border-secondary transition-transform duration-700 group-hover:rotate-360" loading="lazy">
+                <span class="text-2xl font-bold text-secondary text-shadow">冖井之旅</span>
             </div>
-            <!-- 移动端导航菜单 -->
-            <div class="mobile-nav md:hidden text-center" id="mobile-nav">
-                <h3><a href="#trailer">暂无宣传片</a></h3>
-                <h3><a href="#features">游戏特色</a></h3>
-                <h3><a href="#download">下载</a></h3>
-                <h3><a href="#about">关于</a></h3>
+            <!-- 桌面导航 -->
+            <div class="flex items-center gap-8">
+                <a href="https://vbn262.github.io/mj" class="hidden md:block hover:text-secondary transition-colors">www.vbn262.com/mj</a>
+                <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer" class="hidden md:block hover:text-secondary transition-colors">关注抖音</a>
             </div>
-        </nav>
+        </div>
+        <!-- 移动端导航菜单 -->
+        <div class="mobile-nav md:hidden text-center" id="mobile-nav">
+            <h3><a href="#trailer">暂无宣传片</a></h3>
+            <h3><a href="#features">游戏特色</a></h3>
+            <h3><a href="#download">下载</a></h3>
+            <h3><a href="#about">关于</a></h3>
+        </div>
     </header>
     <main class="bodyyy">
         <!-- 英雄区域 -->
@@ -277,7 +275,7 @@
         </section>
         <!-- 游戏特色区域 (新增) -->
         <section id="features" class="py-20 px-4">
-            <div class="mx-auto" style="max-width: 1610px; margin-bottom: 9px; text-align: center;">
+            <div class="mx-auto" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
                 <h2 class="text-4xl font-bold mb-16 text-center text-secondary text-shadow">游戏特色</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- 特色1 -->
@@ -338,7 +336,7 @@
         </section>
         <!-- 下载区域 -->
         <section id="download" class="py-20 px-4">
-            <div class="mx-auto py-4 bg-[rgba(26,26,46,0.7)] text-center border border-secondary rounded-2xl" style="max-width: 1610px; margin-bottom: 9px; text-align: center;">
+            <div class="mx-auto py-4 bg-[rgba(26,26,46,0.7)] text-center border border-secondary rounded-2xl" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
                 <h2 class="text-4xl font-bold mt-6 mb-12 text-center text-secondary text-shadow">开始修仙之旅</h2>
                 <img src="https://vbn262.github.io/4581.jpg" width="199" height="199" alt="Logo" class="mx-auto border-2 border-secondary animate-float" loading="lazy">
                 <span class="text-4xl font-bold mt-12 mt-6 text-center text-secondary text-shadow">冖井之旅 v1.0.0</span>
@@ -384,7 +382,7 @@
         </section>
         <!-- 宣传片区域 -->
         <section id="trailer" class="py-20 px-4">
-            <div class="mx-auto bg-[rgba(26,26,46,0.7)] py-4 text-center border border-secondary rounded-2xl" style="max-width: 1610px; margin-bottom: 9px; text-align: center;">
+            <div class="mx-auto bg-[rgba(26,26,46,0.7)] py-4 text-center border border-secondary rounded-2xl" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
                 <h2 class="text-4xl font-bold mt-12 mb-12 text-secondary text-shadow">游戏宣传片</h2>
                 <div class="mx-auto max-w-xl relative p-4">
                     <i class="fas fa-film text-6xl text-secondary/50 mb-6"></i>
@@ -400,7 +398,7 @@
         </section>
         <!-- 关于我们区域 -->
         <section id="about" class="py-20 px-4">
-            <div class="bg-[rgba(26,26,46,0.7)] mx-auto border border-secondary" style="max-width: 1610px; margin-bottom: 9px; text-align: center;">
+            <div class="bg-[rgba(26,26,46,0.7)] mx-auto border border-secondary" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
                 <h2 class="flex mb-4" style="justify-content: center; font-size: 2rem; margin-top: 9px; margin-bottom: 9px; color: #f0f0f0;">关于我们</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-9 mb-12">
                     <div>
@@ -500,4 +498,3 @@
     </script>
 </body>
 </html>
-
