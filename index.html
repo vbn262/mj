@@ -47,7 +47,7 @@
                 }
             }
         }
-    </script>
+    </script> 
     <!-- 自定义工具类 -->
     <style type="text/tailwindcss">
         @layer utilities {
@@ -71,12 +71,10 @@
                 backdrop-filter: blur(8px);
             }
         }
-    </style>
-    <style>
-        /* 基础样式 */
-        :root {
-            --border-color: rgba(233, 196, 106, 0.3);
-            --light-pink: rgba(26, 26, 46, 0.9);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* 修复盒模型问题 */
         }
 
         body {
@@ -85,11 +83,8 @@
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            min-height: 100vh;
             font-family: 'ZCOOL QingKe HuangYou', sans-serif;
             color: #e6e1cf;
-            margin: 0;
-            padding: 0;
         }
         /* 隐藏滚动条 */
         ::-webkit-scrollbar {
@@ -97,31 +92,9 @@
         }
 
         /* 导航样式 */
-        .nav-container {
-            border: 1px solid var(--border-color);
-            margin-top: 15px;
-            position: relative;
-        }
-
-        .nav-toggle {
-            padding: 12px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: background-color 0.3s;
-        }
-
-            .nav-toggle:hover {
-                background-color: rgba(255, 255, 255, 0.1);
-            }
-
         .mobile-nav {
             display: none;
-            background: linear-gradient(to bottom, #1a1a2e, var(--light-pink));
             text-align: center;
-            border-top: 1px solid var(--border-color);
         }
 
             .mobile-nav.active {
@@ -129,15 +102,14 @@
                 animation: fadeIn 0.5s ease-in-out forwards;
             }
 
-            .mobile-nav h3 a {
+            .mobile-nav a {
                 display: block;
                 padding: 12px;
-                transition: all 0.3s;
             }
 
-                .mobile-nav h3 a:hover {
+                .mobile-nav a:hover {
                     background-color: rgba(233, 196, 106, 0.1);
-                    color: #e9c46a;
+                    color: #e9c46a; 
                 }
 
         /* 动画 */
@@ -188,247 +160,213 @@
                 transform: translateY(0);
             }
         }
-
-        /* 导航链接样式 */
-        nav a {
-            color: #e6e1cf;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-            nav a:hover {
-                color: #e9c46a;
-            }
-
-        /* 定义text-text类（适配深色背景） */
-        .text-text {
-            color: #e2e8f0;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        /* 确保所有链接有一致的交互效果 */
-        a {
-            color: #e9c46a;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-            a:hover {
-                color: #fff;
-            }
     </style>
 </head>
 <body class="scroll-smooth">
     <!-- 页面顶部锚点 -->
     <div id="page-top"></div>
     <!-- 导航栏 -->
-    <header class="fixed py-2 px-4 top-0 left-0 right-0 z-50 bg-[rgba(26,27,45,0.5)]">
-        <div class="mx-auto flex justify-between items-center" style="width: 100%; max-width: 1311px; margin-bottom: 9px; text-align: center;">
+    <header class="fixed px-4 pt-2 top-0 left-0 right-0 z-50 bg-[rgba(96,96,50,0.3)]">
+        <div class="w-full mx-auto text-center flex justify-between" style="max-width: 1311px; margin-bottom: 9px;">
             <div class="flex justify-between items-center gap-3">
-                <!-- 移动端菜单按钮 -->
-                <button id="menu-toggle" class="md:flex nav-toggle text-light">
-                    <i class="fas fa-bars" style="font-size: 1.5rem;"></i>
-                </button>
-                <img src="https://vbn262.github.io/4581.jpg" width="40" height="40" alt="Logo" class="rounded-full border-2 border-secondary transition-transform duration-700 group-hover:rotate-360" loading="lazy">
-                <span class="text-2xl font-bold text-secondary text-shadow">冖井之旅</span>
+                <button id="menu-toggle" class="flex nav-toggle text-light"><!-- 移动端菜单按钮 --><i class="fas fa-bars" style="font-size: 2rem;"></i></button>
+                <img src="https://vbn262.github.io/4581.jpg" width="35" height="35" class="rounded-full border-2 border-secondary transition-transform duration-700 group-hover:rotate-360" loading="lazy">
+                <span class="text-3xl font-bold text-secondary text-shadow">冖井之旅</span>
             </div>
             <!-- 桌面导航 -->
-            <div class="flex items-center gap-8">
+            <div class="flex justify-between items-center gap-8">
                 <a href="https://vbn262.github.io/mj" class="hidden md:block hover:text-secondary transition-colors">www.vbn262.com/mj</a>
                 <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer" class="hidden md:block hover:text-secondary transition-colors">关注抖音</a>
             </div>
         </div>
         <!-- 移动端导航菜单 -->
         <div class="mobile-nav md:hidden text-center" id="mobile-nav">
-            <h3><a href="#trailer">暂无宣传片</a></h3>
-            <h3><a href="#features">游戏特色</a></h3>
-            <h3><a href="#download">下载</a></h3>
-            <h3><a href="#about">关于</a></h3>
+            <a href="#features" class="text-[#e9c46a]">游戏特色</a>
+            <a href="#download" class="text-[#e9c46a]">下载</a>
+            <a href="#trailer" class="text-[#e9c46a]">暂无宣传片</a>
+            <a href="#about" class="text-[#e9c46a]">关于</a>
         </div>
     </header>
-    <main class="bodyyy">
-        <!-- 英雄区域 -->
-        <section class="px-4 relative overflow-hidden bg-[rgba(26,26,46,0.7)] min-h-screen flex items-center pt-20">
-            <div class="mx-auto">
-                <div class="flex flex-col items-center text-center">
-                    <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold mb-6 text-[#e9c46a] text-shadow leading-tight animate-fadeInUp">
-                        冖井之旅<br><span class="text-[#e6e1cf]">修仙问道</span>
-                    </h1>
-                    <p class="text-[clamp(1rem,2vw,1.25rem)] max-w-2xl mb-10 text-[#d9d2b6] animate-fadeInUp" style="animation-delay: 0.3s">
-                        踏上充满奇幻与冒险的修仙旅程，探索未知领域，挑战强大敌人，解开古老谜团，在修仙世界中成就不朽传奇
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp" style="animation-delay: 0.6s">
-                        <a href="#download" class="px-8 py-3 rounded-full font-bold inline-flex items-center gap-2 bg-[#e76f51] text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#e76f51]/30 relative overflow-hidden group">
-                            <i class="fas fa-download"></i> 立即下载
-                            <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/20 transition-all duration-500 group-hover:left-[100%]"></span>
-                        </a>
-                        <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer" class="px-8 py-3 rounded-full font-bold inline-flex items-center gap-2 bg-transparent text-[#e9c46a] border-2 border-[#e9c46a] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#e9c46a]/30 relative overflow-hidden group">
-                            <i class="fas fa-play-circle"></i> 观看抖音
-                            <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/20 transition-all duration-500 group-hover:left-[100%]"></span>
-                        </a>
-                    </div>
+    <!-- 英雄区域 -->
+    <section class="px-4 relative overflow-hidden min-h-screen flex items-center pt-20">
+        <div class="mx-auto">
+            <div class="flex flex-col items-center text-center">
+                <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold mb-6 text-[#e9c46a] text-shadow leading-tight animate-fadeInUp">
+                    冖井之旅<br><span class="text-[#e6e1cf]">修仙问道</span>
+                </h1>
+                <p class="text-[clamp(1rem,2vw,1.25rem)] max-w-2xl mb-10 text-[#d9d2b6] animate-fadeInUp" style="animation-delay: 0.3s">
+                    踏上充满奇幻与冒险的修仙旅程，探索未知领域，挑战强大敌人，解开古老谜团，在修仙世界中成就不朽传奇
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp" style="animation-delay: 0.6s">
+                    <a href="#download" class="px-8 py-3 rounded-full font-bold inline-flex items-center gap-2 bg-[#e76f51] text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#e76f51]/30 relative overflow-hidden group">
+                        <i class="fas fa-download"></i> 立即下载
+                        <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/20 transition-all duration-500 group-hover:left-[100%]"></span>
+                    </a>
+                    <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer" class="px-8 py-3 rounded-full font-bold inline-flex items-center gap-2 bg-transparent text-[#e9c46a] border-2 border-[#e9c46a] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#e9c46a]/30 relative overflow-hidden group">
+                        <i class="fas fa-play-circle"></i> 观看抖音
+                        <span class="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/20 transition-all duration-500 group-hover:left-[100%]"></span>
+                    </a>
                 </div>
             </div>
-            <!-- 装饰元素 -->
-            <div class="absolute top-0 right-0 w-72 h-72 bg-[#e76f51] rounded-full filter blur-[100px] opacity-20 animate-pulse"></div>
-        </section>
-        <!-- 游戏特色区域 (新增) -->
-        <section id="features" class="py-20 px-4">
-            <div class="mx-auto" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
-                <h2 class="text-4xl font-bold mb-16 text-center text-secondary text-shadow">游戏特色</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- 特色1 -->
-                    <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
-                        <div class="text-secondary text-4xl mb-4">
-                            <i class="fas fa-fire-alt"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">修炼体系</h3>
-                        <p class="text-text">完整的修仙体系，从炼气、筑基、金丹到元婴，直至飞升成仙，体验真实的修仙成长之路</p>
+        </div>
+        <!-- 装饰元素 -->
+        <div class="absolute top-0 right-0 w-72 h-72 bg-[#e76f51] rounded-full filter blur-[100px] opacity-20 animate-pulse"></div>
+    </section>
+    <!-- 游戏特色区域 (新增) -->
+    <section id="features" class="py-20 px-4">
+        <div class="mx-auto" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
+            <h2 class="text-4xl font-bold mb-16 text-center text-secondary text-shadow">游戏特色</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 特色1 -->
+                <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-fire-alt"></i>
                     </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">修炼体系</h3>
+                    <p class="text-text">完整的修仙体系，从炼气、筑基、金丹到元婴，直至飞升成仙，体验真实的修仙成长之路</p>
+                </div>
 
-                    <!-- 特色2 -->
-                    <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
-                        <div class="text-secondary text-4xl mb-4">
-                            <i class="fas fa-map-marked-alt"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">开放世界</h3>
-                        <p class="text-text">广阔的修仙世界，秘境探索、妖兽猎杀、机缘奇遇，每一处都可能藏着改变命运的机会</p>
+                <!-- 特色2 -->
+                <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-map-marked-alt"></i>
                     </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">开放世界</h3>
+                    <p class="text-text">广阔的修仙世界，秘境探索、妖兽猎杀、机缘奇遇，每一处都可能藏着改变命运的机会</p>
+                </div>
 
-                    <!-- 特色3 -->
-                    <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
-                        <div class="text-secondary text-4xl mb-4">
-                            <i class="fas fa-book-open"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">功法秘籍</h3>
-                        <p class="text-text">上千种功法秘籍，自由搭配组合，创造属于你的独特修炼之路，成为一代宗师</p>
+                <!-- 特色3 -->
+                <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-book-open"></i>
                     </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">功法秘籍</h3>
+                    <p class="text-text">上千种功法秘籍，自由搭配组合，创造属于你的独特修炼之路，成为一代宗师</p>
+                </div>
 
-                    <!-- 特色4 -->
-                    <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
-                        <div class="text-secondary text-4xl mb-4">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">宗门系统</h3>
-                        <p class="text-text">创建或加入宗门，与同道中人一起修炼、历练、争霸，体验修仙界的恩怨情仇</p>
+                <!-- 特色4 -->
+                <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-users"></i>
                     </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">宗门系统</h3>
+                    <p class="text-text">创建或加入宗门，与同道中人一起修炼、历练、争霸，体验修仙界的恩怨情仇</p>
+                </div>
 
-                    <!-- 特色5 -->
-                    <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
-                        <div class="text-secondary text-4xl mb-4">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">炼丹炼器</h3>
-                        <p class="text-text">完善的炼丹、炼器系统，亲手打造神兵利器、绝世丹药，提升修为，闯荡江湖</p>
+                <!-- 特色5 -->
+                <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-flask"></i>
                     </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">炼丹炼器</h3>
+                    <p class="text-text">完善的炼丹、炼器系统，亲手打造神兵利器、绝世丹药，提升修为，闯荡江湖</p>
+                </div>
 
-                    <!-- 特色6 -->
-                    <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
-                        <div class="text-secondary text-4xl mb-4">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">仙缘奇遇</h3>
-                        <p class="text-text">丰富多彩的随机事件，偶遇仙人指点、获得上古传承，你的每一个选择都将改变命运</p>
+                <!-- 特色6 -->
+                <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-star"></i>
                     </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">仙缘奇遇</h3>
+                    <p class="text-text">丰富多彩的随机事件，偶遇仙人指点、获得上古传承，你的每一个选择都将改变命运</p>
                 </div>
             </div>
-        </section>
-        <!-- 下载区域 -->
-        <section id="download" class="py-20 px-4">
-            <div class="mx-auto py-4 bg-[rgba(26,26,46,0.7)] text-center border border-secondary rounded-2xl" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
-                <h2 class="text-4xl font-bold mt-6 mb-12 text-center text-secondary text-shadow">开始修仙之旅</h2>
-                <img src="https://vbn262.github.io/4581.jpg" width="199" height="199" alt="Logo" class="mx-auto border-2 border-secondary animate-float" loading="lazy">
-                <span class="text-4xl font-bold mt-12 mt-6 text-center text-secondary text-shadow">冖井之旅 v1.0.0</span>
-                <div class="container mx-auto relative p-4">
-                    <div class="relative overflow-hidden w-full max-w-3xl mx-auto">
-                        <h3 class="text-2xl font-bold mt-2 mb-6 text-center text-secondary">下载游戏</h3>
-                        <p class="text-xl text-center mb-4 text-[#d9d2b6]">立即体验修仙世界的奇妙旅程</p>
-                        <p class="text-center mb-6">暂无最新版本 · 暂无大小GB · 更新日期: #-#-#</p>
-                        <div class="text-center flex flex-col sm:flex-col gap-9">
-                            <a href="#" class="px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 bg-secondary text-dark transition-all duration-300 hover:bg-secondary/80 hover:shadow-lg hover:shadow-secondary/30">
-                                <i class="fab fa-android"></i> 安卓版
-                            </a>
-                            <a href="#" class="px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 bg-[#000] text-white transition-all duration-300 hover:bg-gray-800 hover:shadow-lg">
-                                <i class="fab fa-apple"></i> iOS版
-                            </a>
-                            <a href="https://store.steampowered.com/" target="_blank" class="px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 bg-gray-800 text-white transition-all duration-300 hover:bg-gray-700 hover:shadow-lg">
-                                <i class="fab fa-steam"></i> PC版
-                            </a>
-                            <a href="https://www.4399.com/" target="_blank" class="px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 bg-gray-800 text-white transition-all duration-300 hover:bg-gray-700 hover:shadow-lg">
-                                <i class="fas fa-desktop"></i> 4399网页版
-                            </a>
-                        </div>
-                        <div class="mt-8 pt-6 border-t border-secondary/30">
-                            <h4 class="text-xl font-bold mb-4 text-white">暂无游戏配置要求</h4>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <h5 class="text-secondary mb-2">最低配置</h5>
-                                    <ul class="text-text space-y-2">
-                                        <li><i class="fas fa-check-circle text-green-400 mr-2"></i> 暂无</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h5 class="text-secondary mb-2">推荐配置</h5>
-                                    <ul class="text-text space-y-2">
-                                        <li><i class="fas fa-check-circle text-green-400 mr-2"></i> 暂无</li>
-                                    </ul>
-                                </div>
+        </div>
+    </section>
+    <!-- 下载区域 -->
+    <section id="download" class="py-20 px-4">
+        <div class="mx-auto py-4 bg-[rgba(26,26,46,0.7)] text-center border border-secondary rounded-2xl" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
+            <h2 class="text-4xl font-bold mt-6 mb-12 text-center text-secondary text-shadow">开始修仙之旅</h2>
+            <img src="https://vbn262.github.io/4581.jpg" width="199" height="199" alt="Logo" class="mx-auto border-2 border-secondary animate-float" loading="lazy">
+            <span class="text-4xl font-bold mt-12 mt-6 text-center text-secondary text-shadow">冖井之旅 v1.0.0</span>
+            <div class="container mx-auto relative p-4">
+                <div class="relative overflow-hidden w-full max-w-3xl mx-auto">
+                    <h3 class="text-2xl font-bold mt-2 mb-6 text-center text-secondary">下载游戏</h3>
+                    <p class="text-xl text-center mb-4 text-[#d9d2b6]">立即体验修仙世界的奇妙旅程</p>
+                    <p class="text-center mb-6">暂无最新版本 · 暂无大小GB · 更新日期: #-#-#</p>
+                    <div class="text-center flex flex-col sm:flex-col gap-9">
+                        <a href="#" class="px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 bg-secondary text-dark transition-all duration-300 hover:bg-secondary/80 hover:shadow-lg hover:shadow-secondary/30">
+                            <i class="fab fa-android"></i> 安卓版
+                        </a>
+                        <a href="#" class="px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 bg-[#000] text-white transition-all duration-300 hover:bg-gray-800 hover:shadow-lg">
+                            <i class="fab fa-apple"></i> iOS版
+                        </a>
+                        <a href="https://store.steampowered.com/" target="_blank" class="px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 bg-gray-800 text-white transition-all duration-300 hover:bg-gray-700 hover:shadow-lg">
+                            <i class="fab fa-steam"></i> PC版
+                        </a>
+                        <a href="https://www.4399.com/" target="_blank" class="px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 bg-gray-800 text-white transition-all duration-300 hover:bg-gray-700 hover:shadow-lg">
+                            <i class="fas fa-desktop"></i> 4399网页版
+                        </a>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-secondary/30">
+                        <h4 class="text-xl font-bold mb-4 text-white">暂无游戏配置要求</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h5 class="text-secondary mb-2">最低配置</h5>
+                                <ul class="text-text space-y-2">
+                                    <li><i class="fas fa-check-circle text-green-400 mr-2"></i> 暂无</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="text-secondary mb-2">推荐配置</h5>
+                                <ul class="text-text space-y-2">
+                                    <li><i class="fas fa-check-circle text-green-400 mr-2"></i> 暂无</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- 宣传片区域 -->
-        <section id="trailer" class="py-20 px-4">
-            <div class="mx-auto bg-[rgba(26,26,46,0.7)] py-4 text-center border border-secondary rounded-2xl" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
-                <h2 class="text-4xl font-bold mt-12 mb-12 text-secondary text-shadow">游戏宣传片</h2>
-                <div class="mx-auto max-w-xl relative p-4">
-                    <i class="fas fa-film text-6xl text-secondary/50 mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-4 text-white">暂无宣传片</h3>
-                    <p class="text-text max-w-lg mx-auto">
-                        冖井之旅游戏宣传片，敬请期待<br>您可以关注我们的抖音账号获取最新动态
-                    </p>
-                </div>
-                <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 mb-6 px-6 py-3 rounded-full font-bold bg-secondary text-dark transition-all duration-300 hover:bg-secondary/80">
-                    <i class="fab fa-tiktok text-3xl"></i>关注抖音
-                </a>
+        </div>
+    </section>
+    <!-- 宣传片区域 -->
+    <section id="trailer" class="py-20 px-4">
+        <div class="mx-auto bg-[rgba(26,26,46,0.7)] py-4 text-center border border-secondary rounded-2xl" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
+            <h2 class="text-4xl font-bold mt-12 mb-12 text-secondary text-shadow">游戏宣传片</h2>
+            <div class="mx-auto max-w-xl relative p-4">
+                <i class="fas fa-film text-6xl text-secondary/50 mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4 text-white">暂无宣传片</h3>
+                <p class="text-text max-w-lg mx-auto">
+                    冖井之旅游戏宣传片，敬请期待<br>您可以关注我们的抖音账号获取最新动态
+                </p>
             </div>
-        </section>
-        <!-- 关于我们区域 -->
-        <section id="about" class="py-20 px-4">
-            <div class="bg-[rgba(26,26,46,0.7)] mx-auto border border-secondary" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
-                <h2 class="flex mb-4" style="justify-content: center; font-size: 2rem; margin-top: 9px; margin-bottom: 9px; color: #f0f0f0;">关于我们</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-9 mb-12">
-                    <div>
-                        <div class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">工作室成立于2025年，主业网页开发，游戏开发，动漫制作</div>
-                        <div class="flex justify-center"><img src="https://vbn262.github.io/4581.jpg" width="199" height="199" class="animate-float" loading="lazy"></div>
-                        <div class="flex justify-center mb-6" style="margin: 1px; color: #000000;">
-                            <a href="https://space.bilibili.com/1414517639" target="_blank"><i class="fab fa-bilibili" style="color: #f0f0f0; font-size: 2rem; margin-right: 9px;"></i></a>
-                            <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank"><i class="fab fa-tiktok" style="color: #f0f0f0; font-size: 2rem; margin-right: 9px;"></i></a>
-                            <a href="https://weibo.com/u/8007354845" target="_blank"><i class="fab fa-weibo" style="color: #f0f0f0; font-size: 2rem; margin-right: 9px;"></i></a>
-                            <a href="https://author.baidu.com/home?context=%7B%22uk%22%3A%22uictL_bjjQdqbWf_FgunQA%22%7D" target="_blank">
-                                <img src="https://qxb-logo-url-osscache.qixin.com/OriginalUrl/55ca92b57f66be9027c342000012e869.jpg" width="35" height="35" loading="lazy">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="space-y-2 mb-4">
-                        <a href="" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">网页开发</a>
-                        <a href="" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">游戏开发</a>
-                        <a href="" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">动漫制作</a>
-                        <a href="" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">销售服务</a>
-                    </div>
-                    <div class="space-y-2 mb-4">
-                        <a href="https://www.piyao.org.cn/yybgt/index.htm" target="_blank" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">网络谣言曝光台</a>
-                        <a href="https://www.12377.cn/" target="_blank" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">违法和不良信息举报中心</a>
-                        <a href="https://beian.miit.gov.cn" target="_blank" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">ICP备案查询</a>
+            <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 mb-6 px-6 py-3 rounded-full font-bold bg-secondary text-dark transition-all duration-300 hover:bg-secondary/80">
+                <i class="fab fa-tiktok text-3xl"></i>关注抖音
+            </a>
+        </div>
+    </section>
+    <!-- 关于我们区域 -->
+    <section id="about" class="py-20 px-4">
+        <div class="bg-[rgba(26,26,46,0.7)] mx-auto border border-secondary" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
+            <h2 class="flex mb-4" style="justify-content: center; font-size: 2rem; margin: 9px; color: #f0f0f0;">关于我们</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-9 mb-12">
+                <div>
+                    <div class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">工作室成立于2025年，主业网页开发，游戏开发，动漫制作</div>
+                    <div class="flex justify-center"><img src="https://vbn262.github.io/4581.jpg" width="199" height="199" class="animate-float" loading="lazy"></div>
+                    <div class="flex justify-center mb-6" style="margin: 1px; color: #000000;">
+                        <a href="https://space.bilibili.com/1414517639" target="_blank"><i class="fab fa-bilibili" style="color: #f0f0f0; font-size: 2rem; margin-right: 9px;"></i></a>
+                        <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank"><i class="fab fa-tiktok" style="color: #f0f0f0; font-size: 2rem; margin-right: 9px;"></i></a>
+                        <a href="https://weibo.com/u/8007354845" target="_blank"><i class="fab fa-weibo" style="color: #f0f0f0; font-size: 2rem; margin-right: 9px;"></i></a>
+                        <a href="https://author.baidu.com/home?context=%7B%22uk%22%3A%22uictL_bjjQdqbWf_FgunQA%22%7D" target="_blank">
+                            <img src="https://qxb-logo-url-osscache.qixin.com/OriginalUrl/55ca92b57f66be9027c342000012e869.jpg" width="20" height="20" loading="lazy">
+                        </a>
                     </div>
                 </div>
+                <div class="space-y-2 mb-4">
+                    <a href="" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">网页开发</a>
+                    <a href="" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">游戏开发</a>
+                    <a href="" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">动漫制作</a>
+                    <a href="" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">销售服务</a>
+                </div>
+                <div class="space-y-2 mb-4">
+                    <a href="https://www.piyao.org.cn/yybgt/index.htm" target="_blank" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">网络谣言曝光台</a>
+                    <a href="https://www.12377.cn/" target="_blank" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">违法和不良信息举报中心</a>
+                    <a href="https://beian.miit.gov.cn" target="_blank" class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">ICP备案查询</a>
+                </div>
             </div>
-            <div style="color: #9CA3AF; margin: 9px; text-align: center;">Copyright © vbn262.com 工作室 版权所有 2025-现在<br>鲁ICP备2025163733号-1</div>
-        </section>
-    </main>
+        </div>
+        <div style="color: #9CA3AF; margin: 9px; text-align: center;">Copyright © vbn262.com 工作室 版权所有 2025-现在<br>鲁ICP备2025163733号-1</div>
+    </section>
     <!-- 回到顶部按钮 -->
     <a href="#page-top" id="back-to-top" class="scroll-smooth fixed bottom-6 right-6 opacity-0 transition-opacity duration-300 text-text hover:text-white z-50">
         <i class="fas fa-arrow-up text-3xl"></i>
@@ -457,22 +395,12 @@
         // 滚动显示/隐藏回到顶部按钮
         window.addEventListener('scroll', () => {
             const backToTop = document.getElementById('back-to-top');
-            const header = document.querySelector('header nav');
+            const header = document.querySelector('header');
             // 控制回到顶部按钮显示
-            if (window.scrollY > 500) {
+            if (window.scrollY > 5) {
                 backToTop.classList.replace('opacity-0', 'opacity-100');
             } else {
                 backToTop.classList.replace('opacity-100', 'opacity-0');
-            }
-            // 导航栏滚动效果
-            if (window.scrollY > 100) {
-                header.classList.add('py-2');
-                header.classList.remove('py-4');
-                header.classList.add('shadow-md');
-            } else {
-                header.classList.add('py-4');
-                header.classList.remove('py-2');
-                header.classList.remove('shadow-md');
             }
         });
         // 平滑滚动到锚点
