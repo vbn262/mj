@@ -29,21 +29,6 @@
                         xianxia: ['"Ma Shan Zheng"', 'serif'], // 修仙标题字体
                         game: ['"ZCOOL QingKe HuangYou"', 'sans-serif'] // 游戏内文本字体
                     },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' }
-                        },
-                        'pulse-glow': {
-                            '0%, 100%': { boxShadow: '0 0 5px rgba(233, 196, 106, 0.5)' },
-                            '50%': { boxShadow: '0 0 20px rgba(233, 196, 106, 0.8)' }
-                        }
-                    }
                 }
             }
         }
@@ -75,17 +60,6 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* 修复盒模型问题 */
-        }
-
-        body {
-            background-image: url('https://vbn262.github.io/1.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            font-family: 'ZCOOL QingKe HuangYou', sans-serif;
-            color: #e6e1cf;
         }
         /* 隐藏滚动条 */
         ::-webkit-scrollbar {
@@ -163,29 +137,25 @@
         }
     </style>
 </head>
-<body class="scroll-smooth">
-    <!-- 页面顶部锚点 -->
-    <div id="page-top"></div>
+<body class="scroll-smooth" style="background-image: url('https://vbn262.github.io/1.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; font-family: 'ZCOOL QingKe HuangYou', sans-serif; color: #e6e1cf;"id="page-top">
     <!-- 导航栏 -->
     <header class="fixed px-4 pt-2 top-0 left-0 right-0 z-50 bg-[rgba(96,96,50,0.3)]">
         <div class="w-full mx-auto text-center flex justify-between" style="max-width: 1311px; margin-bottom: 9px;">
-            <div class="flex justify-between items-center gap-3">
-                <button id="menu-toggle" class="flex nav-toggle text-light"><!-- 移动端菜单按钮 --><i class="fas fa-bars" style="font-size: 2rem;"></i></button>
-                <img src="https://vbn262.github.io/4581.jpg" width="35" height="35" class="rounded-full border-2 border-secondary transition-transform duration-700 group-hover:rotate-360" loading="lazy">
+            <button id="menu-toggle" class="flex nav-toggle text-light">
+                <i class="fas fa-bars" style="font-size: 2rem;"></i>
+                <img src="https://vbn262.github.io/4581.jpg" width="35" height="35" class="ml-4 rounded-full border-2 border-secondary transition-transform duration-700 group-hover:rotate-360" loading="lazy">
                 <span class="text-3xl font-bold text-secondary text-shadow">冖井之旅</span>
-            </div>
+            </button>
             <!-- 桌面导航 -->
             <div class="flex justify-between items-center gap-8">
                 <a href="https://vbn262.github.io/mj" class="hidden md:block hover:text-secondary transition-colors">www.vbn262.com/mj</a>
-                <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" rel="noopener noreferrer" class="hidden md:block hover:text-secondary transition-colors">关注抖音</a>
+                <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank" class="hidden md:block hover:text-secondary transition-colors">关注抖音</a>
             </div>
         </div>
         <!-- 移动端导航菜单 -->
         <div class="mobile-nav md:hidden text-center" id="mobile-nav">
-            <a href="#features" class="text-[#e9c46a]">游戏特色</a>
-            <a href="#download" class="text-[#e9c46a]">下载</a>
-            <a href="#trailer" class="text-[#e9c46a]">暂无宣传片</a>
-            <a href="#about" class="text-[#e9c46a]">关于</a>
+            <a href="#features" class="text-[#e9c46a]">游戏特色</a><a href="#download" class="text-[#e9c46a]">下载</a>
+            <a href="#trailer" class="text-[#e9c46a]">暂无宣传片</a><a href="#about" class="text-[#e9c46a]">关于</a>
         </div>
     </header>
     <!-- 英雄区域 -->
@@ -218,7 +188,7 @@
         <div class="mx-auto" style="max-width: 1311px; margin-bottom: 9px; text-align: center;">
             <h2 class="text-4xl font-bold mb-16 text-center text-secondary text-shadow">游戏特色</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- 特色1 -->
+
                 <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-fire-alt"></i>
@@ -226,8 +196,6 @@
                     <h3 class="text-2xl font-bold mb-3 text-white">修炼体系</h3>
                     <p class="text-text">完整的修仙体系，从炼气、筑基、金丹到元婴，直至飞升成仙，体验真实的修仙成长之路</p>
                 </div>
-
-                <!-- 特色2 -->
                 <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-map-marked-alt"></i>
@@ -235,8 +203,6 @@
                     <h3 class="text-2xl font-bold mb-3 text-white">开放世界</h3>
                     <p class="text-text">广阔的修仙世界，秘境探索、妖兽猎杀、机缘奇遇，每一处都可能藏着改变命运的机会</p>
                 </div>
-
-                <!-- 特色3 -->
                 <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-book-open"></i>
@@ -244,8 +210,6 @@
                     <h3 class="text-2xl font-bold mb-3 text-white">功法秘籍</h3>
                     <p class="text-text">上千种功法秘籍，自由搭配组合，创造属于你的独特修炼之路，成为一代宗师</p>
                 </div>
-
-                <!-- 特色4 -->
                 <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-users"></i>
@@ -253,8 +217,6 @@
                     <h3 class="text-2xl font-bold mb-3 text-white">宗门系统</h3>
                     <p class="text-text">创建或加入宗门，与同道中人一起修炼、历练、争霸，体验修仙界的恩怨情仇</p>
                 </div>
-
-                <!-- 特色5 -->
                 <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-flask"></i>
@@ -262,8 +224,6 @@
                     <h3 class="text-2xl font-bold mb-3 text-white">炼丹炼器</h3>
                     <p class="text-text">完善的炼丹、炼器系统，亲手打造神兵利器、绝世丹药，提升修为，闯荡江湖</p>
                 </div>
-
-                <!-- 特色6 -->
                 <div class="bg-[rgba(26,26,46,0.5)] p-6 rounded-xl border border-secondary/30 hover:border-secondary/70 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 transform hover:-translate-y-1">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-star"></i>
@@ -345,7 +305,7 @@
                     <div class="flex justify-center" style="color: #f0f0f0; font-size: 1rem;">工作室成立于2025年，主业网页开发，游戏开发，动漫制作</div>
                 </div>
                 <div>
-                    <div class="flex justify-center"><img src="https://vbn262.github.io/4581.jpg" width="199" height="199" class="animate-float" loading="lazy"></div>
+                    <img src="https://vbn262.github.io/4581.jpg" width="199" height="199" loading="lazy" class="mx-auto">
                     <div class="flex justify-center mb-6" style="color: #000000;">
                         <a href="https://space.bilibili.com/1414517639" target="_blank"><i class="fab fa-bilibili" style="color: #f0f0f0; font-size: 2rem; margin-right: 9px;"></i></a>
                         <a href="https://www.douyin.com/user/MS4wLjABAAAAkPR1XF2VE55aaQjvYg47s4EFKYlcaE1qV2GbxTGrwTI" target="_blank"><i class="fab fa-tiktok" style="color: #f0f0f0; font-size: 2rem; margin-right: 9px;"></i></a>
@@ -364,10 +324,7 @@
         </div>
         <div class="text-center mb-6" style="color: #9CA3AF;">Copyright © vbn262.com 工作室 版权所有 2025-现在<br>鲁ICP备2025163733号-1</div>
     </section>
-    <!-- 回到顶部按钮 -->
-    <a href="#page-top" id="back-to-top" class="scroll-smooth fixed bottom-6 right-6 opacity-0 transition-opacity duration-300 text-text hover:text-white z-50">
-        <i class="fas fa-arrow-up text-3xl"></i>
-    </a>
+    <a href="#page-top" id="back-to-top" class="scroll-smooth fixed bottom-6 right-6 opacity-0 transition-opacity duration-300 text-text hover:text-white z-50"><i class="fas fa-arrow-up text-3xl"></i></a>
     <script>
         // 移动端菜单切换
         const menuToggle = document.getElementById('menu-toggle');
